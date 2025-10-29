@@ -31,7 +31,7 @@ export const workProjects: Project[] = [
     id: 'air-quality',
     title: 'Amazon Air Quality Monitor',
     description: 'Led team that upleveled the Amazon Air Quality Monitor.',
-    images: ['/placeholder.svg'],
+    images: [new URL('../assets/air-quality-1.jpg', import.meta.url).href],
     link: '',
     date: '2022'
   },
