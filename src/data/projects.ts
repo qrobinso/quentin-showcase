@@ -17,14 +17,6 @@ export const workProjects: Project[] = [
     date: '2024'
   },
   {
-    id: 'frotorial',
-    title: 'FROtorial - Social Network for Textured Hair',
-    description: 'Built a dedicated social network for the kinky and curly hair community to document hair journeys, search product reviews by hair type, discover routines, and buy products directly. Addressed a gap in the multi-billion dollar ethnic hair care market.',
-    images: ['/placeholder.svg'],
-    link: '',
-    date: '2023'
-  },
-  {
     id: 'air-quality',
     title: 'Amazon Air Quality Monitor',
     description: 'Led team that upleveled the Amazon Air Quality Monitor, bringing advanced environmental sensing capabilities to customers.',
@@ -43,6 +35,14 @@ export const workProjects: Project[] = [
 ];
 
 export const sideProjects: Project[] = [
+  {
+    id: 'frotorial',
+    title: 'FROtorial - Social Network for Textured Hair',
+    description: 'Built a dedicated social network for the kinky and curly hair community to document hair journeys, search product reviews by hair type, discover routines, and buy products directly. Addressed a gap in the multi-billion dollar ethnic hair care market.',
+    images: ['/placeholder.svg'],
+    link: '',
+    date: '2023'
+  },
   {
     id: 'vinyl-stream',
     title: 'Vinyl Stream - Physical Triggers for Digital Streaming',
