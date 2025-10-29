@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { ProjectGallery } from "@/components/ProjectGallery";
@@ -6,9 +7,11 @@ import { ChatWidget } from "@/components/ChatWidget";
 import { workProjects, sideProjects, patents } from "@/data/projects";
 
 const Index = () => {
+  const [isChatOpen, setIsChatOpen] = useState(false);
+
   return (
     <div className="min-h-screen">
-      <Header />
+      <Header onChatClick={() => setIsChatOpen(!isChatOpen)} />
       <Hero />
       
       <ProjectGallery 
@@ -32,7 +35,7 @@ const Index = () => {
         patents={patents}
       />
 
-      <ChatWidget />
+      <ChatWidget isOpen={isChatOpen} setIsOpen={setIsChatOpen} />
       
       <footer className="py-12 px-6 border-t border-border">
         <div className="max-w-7xl mx-auto text-center text-muted-foreground">

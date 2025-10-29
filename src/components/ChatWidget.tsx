@@ -10,8 +10,12 @@ interface Message {
   content: string;
 }
 
-export const ChatWidget = () => {
-  const [isOpen, setIsOpen] = useState(false);
+interface ChatWidgetProps {
+  isOpen: boolean;
+  setIsOpen: (open: boolean) => void;
+}
+
+export const ChatWidget = ({ isOpen, setIsOpen }: ChatWidgetProps) => {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: 'assistant',
@@ -38,7 +42,7 @@ export const ChatWidget = () => {
   };
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 border-t-2 border-accent bg-gradient-to-r from-primary via-primary/95 to-primary shadow-2xl">
+    <div className="fixed bottom-0 left-0 right-0 z-50 border-t border-border bg-background">
       {/* Chat Messages Window */}
       {isOpen && (
         <div className="max-w-7xl mx-auto h-[400px] flex flex-col animate-in slide-in-from-bottom-4 duration-300">
@@ -67,19 +71,19 @@ export const ChatWidget = () => {
       )}
 
       {/* Chat Bar */}
-      <div className="max-w-7xl mx-auto px-6 py-6">
+      <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center gap-4">
           <Button
             variant="ghost"
-            size="lg"
+            size="default"
             onClick={() => setIsOpen(!isOpen)}
-            className="shrink-0 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground"
+            className="shrink-0"
           >
-            {isOpen ? <X className="h-6 w-6" /> : <MessageCircle className="h-6 w-6" />}
+            {isOpen ? <X className="h-5 w-5" /> : <MessageCircle className="h-5 w-5" />}
           </Button>
           
           <div className="flex-1 flex flex-col gap-2">
-            <h3 className="text-lg font-bold text-primary-foreground">
+            <h3 className="text-sm font-semibold">
               Chat with Quentin's Agent
             </h3>
             <div className="flex gap-2">
@@ -88,10 +92,10 @@ export const ChatWidget = () => {
                 onChange={(e) => setInput(e.target.value)}
                 onKeyPress={(e) => e.key === 'Enter' && handleSend()}
                 placeholder="Ask me anything about Quentin's career, projects, and patents..."
-                className="flex-1 bg-card border-accent text-lg py-6"
+                className="flex-1"
               />
-              <Button onClick={handleSend} size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground px-8">
-                <Send className="h-5 w-5" />
+              <Button onClick={handleSend} size="default">
+                <Send className="h-4 w-4" />
               </Button>
             </div>
           </div>
