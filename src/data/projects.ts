@@ -55,7 +55,7 @@ export const workProjects: Project[] = [
     id: 'cas',
     title: 'Verizon Critical Asset Sensor',
     description: 'Lead product manager for Verizon\'s first 1P B2B product, the Critical Asset Sensor. The solution includes a multi-sensor device, access to data stream APIs, and Verizon 4G LTE-M M2M connectivity, all bundled together. Deploy multi-sensor devices in the field without having to worry about devices, connectivity, protocols, or security.',
-    images: ['/placeholder.svg'],
+    images: [new URL('../assets/cas-1.png', import.meta.url).href],
     link: '',
     date: '2020'
   },
