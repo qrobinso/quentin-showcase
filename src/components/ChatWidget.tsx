@@ -71,7 +71,7 @@ export const ChatWidget = ({ isOpen, setIsOpen }: ChatWidgetProps) => {
       )}
 
       {/* Chat Bar */}
-      <div className="max-w-7xl mx-auto px-6 py-4">
+      <div className="max-w-7xl mx-auto px-6 py-3">
         <div className="flex items-center gap-4">
           <Button
             variant="ghost"
@@ -82,11 +82,7 @@ export const ChatWidget = ({ isOpen, setIsOpen }: ChatWidgetProps) => {
             {isOpen ? <X className="h-5 w-5" /> : <MessageCircle className="h-5 w-5" />}
           </Button>
           
-          <div className="flex-1 flex flex-col gap-2">
-            <h3 className="text-sm font-semibold">
-              Chat with Quentin's Agent
-            </h3>
-            <div className="flex gap-2">
+          <div className="flex-1 flex gap-2">
               <Input
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
@@ -97,7 +93,6 @@ export const ChatWidget = ({ isOpen, setIsOpen }: ChatWidgetProps) => {
               <Button onClick={handleSend} size="default">
                 <Send className="h-4 w-4" />
               </Button>
-            </div>
           </div>
         </div>
       </div>
