@@ -38,42 +38,10 @@ export const ChatWidget = () => {
   };
 
   return (
-    <>
-      {/* Chat Button */}
-      <div className="fixed bottom-6 right-6 z-50">
-        {!isOpen && (
-          <Button
-            onClick={() => setIsOpen(true)}
-            size="lg"
-            className="rounded-full h-16 w-16 shadow-2xl bg-accent hover:bg-accent/90 text-accent-foreground"
-          >
-            <MessageCircle className="h-7 w-7" />
-          </Button>
-        )}
-      </div>
-
-      {/* Chat Window */}
+    <div className="fixed bottom-0 left-0 right-0 z-50 border-t border-border bg-card">
+      {/* Chat Messages Window */}
       {isOpen && (
-        <Card className="fixed bottom-6 right-6 z-50 w-96 h-[600px] flex flex-col shadow-2xl border-border animate-in slide-in-from-bottom-4 duration-300">
-          {/* Header */}
-          <div className="flex items-center justify-between p-4 border-b border-border bg-primary text-primary-foreground">
-            <div className="flex items-center gap-3">
-              <MessageCircle className="h-5 w-5" />
-              <div>
-                <h3 className="font-semibold">Chat with Quentin's Agent</h3>
-                <p className="text-xs opacity-80">Ask me anything</p>
-              </div>
-            </div>
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => setIsOpen(false)}
-              className="hover:bg-primary-foreground/10"
-            >
-              <X className="h-4 w-4" />
-            </Button>
-          </div>
-
+        <div className="max-w-7xl mx-auto h-[400px] flex flex-col animate-in slide-in-from-bottom-4 duration-300">
           {/* Messages */}
           <ScrollArea className="flex-1 p-4">
             <div className="space-y-4">
@@ -95,24 +63,35 @@ export const ChatWidget = () => {
               ))}
             </div>
           </ScrollArea>
-
-          {/* Input */}
-          <div className="p-4 border-t border-border">
-            <div className="flex gap-2">
-              <Input
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-                onKeyPress={(e) => e.key === 'Enter' && handleSend()}
-                placeholder="Type your message..."
-                className="flex-1"
-              />
-              <Button onClick={handleSend} size="icon" className="bg-accent hover:bg-accent/90">
-                <Send className="h-4 w-4" />
-              </Button>
-            </div>
-          </div>
-        </Card>
+        </div>
       )}
-    </>
+
+      {/* Chat Bar */}
+      <div className="max-w-7xl mx-auto px-6 py-4">
+        <div className="flex items-center gap-4">
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={() => setIsOpen(!isOpen)}
+            className="shrink-0"
+          >
+            {isOpen ? <X className="h-5 w-5" /> : <MessageCircle className="h-5 w-5" />}
+          </Button>
+          
+          <div className="flex-1 flex gap-2">
+            <Input
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              onKeyPress={(e) => e.key === 'Enter' && handleSend()}
+              placeholder="Chat with Quentin's Agent..."
+              className="flex-1"
+            />
+            <Button onClick={handleSend} size="icon" className="bg-accent hover:bg-accent/90">
+              <Send className="h-4 w-4" />
+            </Button>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
