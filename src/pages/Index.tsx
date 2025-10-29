@@ -1,5 +1,6 @@
 import { Hero } from "@/components/Hero";
 import { ProjectGallery } from "@/components/ProjectGallery";
+import { PatentTable } from "@/components/PatentTable";
 import { ChatWidget } from "@/components/ChatWidget";
 import { workProjects, sideProjects, patents } from "@/data/projects";
 
@@ -22,11 +23,11 @@ const Index = () => {
         projects={sideProjects}
       />
       
-      <ProjectGallery 
+      <PatentTable 
         id="patents"
         title="Patent Portfolio"
         description="Innovations in IoT, AI, and distributed systems"
-        projects={patents}
+        patents={patents}
       />
 
       <ChatWidget />

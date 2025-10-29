@@ -1,0 +1,53 @@
+import { Project } from "@/data/projects";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+
+interface PatentTableProps {
+  title: string;
+  description: string;
+  patents: Project[];
+  id: string;
+}
+
+export const PatentTable = ({ title, description, patents, id }: PatentTableProps) => {
+  return (
+    <section id={id} className="py-24 px-6">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16 space-y-4">
+          <h2 className="text-5xl md:text-6xl font-serif font-bold text-foreground">
+            {title}
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            {description}
+          </p>
+        </div>
+
+        <div className="rounded-lg border border-border overflow-hidden bg-card shadow-lg">
+          <Table>
+            <TableHeader>
+              <TableRow className="bg-muted/50">
+                <TableHead className="font-semibold text-foreground">Title</TableHead>
+                <TableHead className="font-semibold text-foreground">Description</TableHead>
+                <TableHead className="font-semibold text-foreground text-right">Date</TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
+              {patents.map((patent) => (
+                <TableRow key={patent.id} className="hover:bg-muted/30 transition-colors">
+                  <TableCell className="font-medium text-foreground max-w-xs">
+                    {patent.title}
+                  </TableCell>
+                  <TableCell className="text-muted-foreground">
+                    {patent.description}
+                  </TableCell>
+                  <TableCell className="text-muted-foreground text-right whitespace-nowrap">
+                    {patent.date}
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </div>
+      </div>
+    </section>
+  );
+};
