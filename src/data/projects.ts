@@ -103,7 +103,12 @@ export const sideProjects: Project[] = [
     id: 'frotorial',
     title: 'FROtorial - Social Network for Textured Hair',
     description: 'FROtorial addressed a gap in the multi-billion dollar ethnic hair care market—no major social platforms served the kinky and curly hair community. We built a social network where users could document their hair journey, search product reviews filtered by hair type, discover routines, and buy products directly. The core insight was simple: people with textured hair had questions and conversations they wouldn\'t post on Facebook or Instagram. They needed a dedicated space.',
-    images: ['/placeholder.svg'],
+    images: [
+      new URL('../assets/frotorial-1.avif', import.meta.url).href,
+      new URL('../assets/frotorial-2.avif', import.meta.url).href,
+      new URL('../assets/frotorial-3.avif', import.meta.url).href,
+      new URL('../assets/frotorial-4.avif', import.meta.url).href
+    ],
     link: '',
     date: '2021'
   },
