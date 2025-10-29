@@ -5,6 +5,8 @@ export interface Project {
   images: string[];
   link?: string;
   date: string;
+  sector?: 'Consumer' | 'B2B';
+  type?: 'Device' | 'Service';
 }
 
 export const workProjects: Project[] = [
@@ -17,7 +19,9 @@ export const workProjects: Project[] = [
       new URL('../assets/ffa-2.jpg', import.meta.url).href
     ],
     link: 'https://www.amazon.com/gp/help/customer/display.html?nodeId=TWqBhTGsWJP8lYhbye',
-    date: '2024'
+    date: '2024',
+    sector: 'Consumer',
+    type: 'Service'
   },
   {
     id: 'ffs-portal',
@@ -25,7 +29,9 @@ export const workProjects: Project[] = [
     description: 'Lead product manager for the FFS developer portal experience.',
     images: [new URL('../assets/ffs-portal-1.png', import.meta.url).href],
     link: 'https://developer.amazon.com/frustration-free-setup',
-    date: '2023'
+    date: '2023',
+    sector: 'B2B',
+    type: 'Service'
   },
   {
     id: 'air-quality',
@@ -33,7 +39,9 @@ export const workProjects: Project[] = [
     description: 'Led team that upleveled the Amazon Air Quality Monitor.',
     images: [new URL('../assets/air-quality-1.jpg', import.meta.url).href],
     link: 'https://a.co/d/iN3uhzq',
-    date: '2022'
+    date: '2022',
+    sector: 'Consumer',
+    type: 'Device'
   },
   {
     id: 'ffs-matter',
@@ -41,7 +49,9 @@ export const workProjects: Project[] = [
     description: 'Lead product manager for FFS over Matter.',
     images: [new URL('../assets/ffs-matter-1.png', import.meta.url).href],
     link: 'https://developer.amazon.com/en-US/blogs/alexa/device-makers/2022/01/ces-frustration-free-setup-matter',
-    date: '2022'
+    date: '2022',
+    sector: 'B2B',
+    type: 'Service'
   },
   {
     id: 'wifi-reconnect',
@@ -49,7 +59,9 @@ export const workProjects: Project[] = [
     description: 'Wifi simple reconnect aims to simplify updating network credentials for a customer\'s compatible smart devices. As a customer, updating all your connected devices\' wifi credentials can be a painful experience when moving to a new building, changing internet service providers, or simply updating wifi passwords for security reasons.',
     images: [new URL('../assets/wifi-reconnect-1.png', import.meta.url).href],
     link: 'https://developer.amazon.com/en-US/blogs/alexa/device-makers/2020/09/Frustration-Free-Setup-Expands-Features-Protocols-and-Simplifies-Onboarding',
-    date: '2021'
+    date: '2021',
+    sector: 'Consumer',
+    type: 'Service'
   },
   {
     id: 'cas',
@@ -57,7 +69,9 @@ export const workProjects: Project[] = [
     description: 'Lead product manager for Verizon\'s first 1P B2B product, the Critical Asset Sensor. The solution includes a multi-sensor device, access to data stream APIs, and Verizon 4G LTE-M M2M connectivity, all bundled together. Deploy multi-sensor devices in the field without having to worry about devices, connectivity, protocols, or security.',
     images: [new URL('../assets/cas-1.png', import.meta.url).href],
     link: 'https://thingspace.verizon.com/documentation/iot-devices/critical-asset-sensor.html',
-    date: '2020'
+    date: '2020',
+    sector: 'B2B',
+    type: 'Device'
   },
   {
     id: 'gizmo-pal',
@@ -65,7 +79,9 @@ export const workProjects: Project[] = [
     description: 'Owned product requirements and development for GizmoPal watch at Verizon.',
     images: [new URL('../assets/gizmo-pal-1.jpg', import.meta.url).href],
     link: 'https://www.verizon.com/connected-smartwatches/verizon-gizmowatch-2/',
-    date: '2019'
+    date: '2019',
+    sector: 'Consumer',
+    type: 'Device'
   },
   {
     id: 'thingspace',
@@ -73,7 +89,9 @@ export const workProjects: Project[] = [
     description: 'Led Product for ThingSpace Ready. TS-R was designed to help cellular IoT solutions get to market quickly, reliably and cost effectively. Access everything you need, including transparent pricing, design house and system integrator support, free certification support and bill-initiated credits.',
     images: ['/placeholder.svg'],
     link: 'https://thingspace.verizon.com/ready',
-    date: '2018'
+    date: '2018',
+    sector: 'B2B',
+    type: 'Service'
   },
   {
     id: 'wear24',
@@ -81,7 +99,9 @@ export const workProjects: Project[] = [
     description: 'Lead software product manager for the Wear24 watch.',
     images: [new URL('../assets/wear24-1.png', import.meta.url).href],
     link: 'https://www.phonescoop.com/articles/article.php?a=19172',
-    date: '2017'
+    date: '2017',
+    sector: 'Consumer',
+    type: 'Device'
   }
 ];
 
