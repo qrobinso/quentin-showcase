@@ -47,7 +47,7 @@ export const workProjects: Project[] = [
     id: 'wifi-reconnect',
     title: 'Wifi Simple Reconnect',
     description: 'Wifi simple reconnect aims to simplify updating network credentials for a customer\'s compatible smart devices. As a customer, updating all your connected devices\' wifi credentials can be a painful experience when moving to a new building, changing internet service providers, or simply updating wifi passwords for security reasons.',
-    images: ['/placeholder.svg'],
+    images: [new URL('../assets/wifi-reconnect-1.png', import.meta.url).href],
     link: 'https://developer.amazon.com/en-US/blogs/alexa/device-makers/2020/09/Frustration-Free-Setup-Expands-Features-Protocols-and-Simplifies-Onboarding',
     date: '2021'
   },
