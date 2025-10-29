@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
+import { useIsMobile } from "@/hooks/use-mobile";
 interface Message {
   role: 'user' | 'assistant';
   content: string;
@@ -25,6 +26,7 @@ export const ChatWidget = ({
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
+  const isMobile = useIsMobile();
 
   const handleSend = async () => {
     if (!input.trim() || isLoading) return;
@@ -99,24 +101,26 @@ export const ChatWidget = ({
               </div>}
           </Button>
           
-          <div className="flex-1 flex gap-2">
-              <Input 
-                value={input} 
-                onChange={e => setInput(e.target.value)} 
-                onKeyPress={e => e.key === 'Enter' && !isLoading && handleSend()} 
-                placeholder="Ask me anything about Quentin's career, projects, and patents..." 
-                className="flex-1 bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50"
-                disabled={isLoading}
-              />
-              <Button 
-                onClick={handleSend} 
-                size="default" 
-                className="bg-primary-foreground text-primary hover:bg-primary-foreground/90"
-                disabled={isLoading}
-              >
-                <Send className="h-4 w-4" />
-              </Button>
-          </div>
+          {(!isMobile || isOpen) && (
+            <div className="flex-1 flex gap-2">
+                <Input 
+                  value={input} 
+                  onChange={e => setInput(e.target.value)} 
+                  onKeyPress={e => e.key === 'Enter' && !isLoading && handleSend()} 
+                  placeholder="Ask me anything about Quentin's career, projects, and patents..." 
+                  className="flex-1 bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50"
+                  disabled={isLoading}
+                />
+                <Button 
+                  onClick={handleSend} 
+                  size="default" 
+                  className="bg-primary-foreground text-primary hover:bg-primary-foreground/90"
+                  disabled={isLoading}
+                >
+                  <Send className="h-4 w-4" />
+                </Button>
+            </div>
+          )}
         </div>
       </div>
     </div>;
