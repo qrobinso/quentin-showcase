@@ -1,4 +1,18 @@
-# Welcome to your Lovable project
+# Quentin Robinson - Portfolio
+
+A professional portfolio showcasing product management work, side projects, and patent innovations in IoT, AI, and distributed systems.
+
+## About This Site
+
+This portfolio highlights my career journey from leading smart home automation products at Amazon to building B2B IoT solutions at Verizon, along with personal side projects exploring digital photo frames, social networks, and e-commerce platforms.
+
+### Featured Sections
+
+- **Work Projects**: Products impacting millions of users including Frustration-Free Automation, Amazon Air Quality Monitor, and Verizon's Critical Asset Sensor
+- **Side Projects**: Personal explorations like Photo Frame Assistant, FROtorial (social network for textured hair), and ShopBuy (universal shopping cart)
+- **Patent Portfolio**: 15+ patents covering IoT device automation, network provisioning, and wearable technology innovations
+
+*If you're reading this: hi :-)*
 
 ## Project info
 
@@ -52,13 +66,16 @@ npm run dev
 
 ## What technologies are used for this project?
 
-This project is built with:
+This portfolio is built with modern web technologies:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- **React** - Component-based UI framework
+- **TypeScript** - Type-safe JavaScript
+- **Vite** - Fast build tool and dev server
+- **Tailwind CSS** - Utility-first CSS framework
+- **shadcn/ui** - Beautifully designed component library
+- **Lucide React** - Icon library
+- **React Router** - Client-side routing
+- **Lovable Cloud** - Backend database and authentication (Supabase)
 
 ## How can I deploy this project?
 
