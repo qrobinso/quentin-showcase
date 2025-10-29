@@ -71,7 +71,7 @@ export const ProjectGallery = ({ title, description, projects, id }: ProjectGall
               className="hover-lift overflow-hidden group border-border bg-card shadow-lg"
             >
               <div 
-                className="aspect-video overflow-hidden bg-muted relative cursor-pointer"
+                className="aspect-[4/3] overflow-hidden bg-muted relative cursor-pointer"
                 onClick={() => openModal(project.id)}
               >
                 <img 

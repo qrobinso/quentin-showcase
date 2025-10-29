@@ -41,7 +41,7 @@ export const ImageGalleryModal = ({
             <X className="h-4 w-4" />
           </Button>
 
-          <div className="relative aspect-video bg-muted">
+          <div className="relative aspect-[4/3] bg-muted">
             <img
               src={images[currentIndex]}
               alt={`${projectTitle} - Image ${currentIndex + 1}`}
