@@ -13,7 +13,7 @@ export const Hero = () => {
           <div className="text-center md:text-left space-y-6">
             <h1 className="text-6xl md:text-7xl lg:text-8xl font-serif font-bold text-foreground leading-tight">Hi, I'm Quentin.</h1>
             
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl leading-relaxed font-light">I'm a product leader who has built some of the world's most popular consumer electronics and shipped B2B enterprise services at scale. Lets build the next game changer together.</p>
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl leading-relaxed font-light">I'm a product leader who has built some of the world's most popular consumer electronics and shipped B2B enterprise services at scale. Let's build the next game changer together.</p>
           </div>
         </div>
 
