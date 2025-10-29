@@ -42,7 +42,7 @@ export const ChatWidget = ({ isOpen, setIsOpen }: ChatWidgetProps) => {
   };
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 border-t border-border bg-background">
+    <div className="fixed bottom-0 left-0 right-0 z-50 border-t border-primary/20 bg-primary text-primary-foreground">
       {/* Chat Messages Window */}
       {isOpen && (
         <div className="max-w-7xl mx-auto h-[400px] flex flex-col animate-in slide-in-from-bottom-4 duration-300">
@@ -57,8 +57,8 @@ export const ChatWidget = ({ isOpen, setIsOpen }: ChatWidgetProps) => {
                   <div
                     className={`max-w-[80%] rounded-lg px-4 py-2 ${
                       message.role === 'user'
-                        ? 'bg-accent text-accent-foreground'
-                        : 'bg-card text-foreground border border-border'
+                        ? 'bg-primary-foreground text-primary'
+                        : 'bg-primary-foreground/10 text-primary-foreground border border-primary-foreground/20'
                     }`}
                   >
                     <p className="text-sm">{message.content}</p>
