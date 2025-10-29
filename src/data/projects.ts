@@ -16,7 +16,7 @@ export const workProjects: Project[] = [
       new URL('../assets/ffa-1.jpg', import.meta.url).href,
       new URL('../assets/ffa-2.jpg', import.meta.url).href
     ],
-    link: '',
+    link: 'https://www.amazon.com/gp/help/customer/display.html?nodeId=TWqBhTGsWJP8lYhbye',
     date: '2024'
   },
   {
@@ -24,7 +24,7 @@ export const workProjects: Project[] = [
     title: 'Frustration-Free Setup Developer Portal',
     description: 'Lead product manager for the FFS developer portal experience.',
     images: [new URL('../assets/ffs-portal-1.png', import.meta.url).href],
-    link: '',
+    link: 'https://developer.amazon.com/frustration-free-setup',
     date: '2023'
   },
   {
@@ -32,7 +32,7 @@ export const workProjects: Project[] = [
     title: 'Amazon Air Quality Monitor',
     description: 'Led team that upleveled the Amazon Air Quality Monitor.',
     images: [new URL('../assets/air-quality-1.jpg', import.meta.url).href],
-    link: '',
+    link: 'https://a.co/d/iN3uhzq',
     date: '2022'
   },
   {
@@ -40,7 +40,7 @@ export const workProjects: Project[] = [
     title: 'Frustration Free Setup for Matter Devices',
     description: 'Lead product manager for FFS over Matter.',
     images: [new URL('../assets/ffs-matter-1.png', import.meta.url).href],
-    link: '',
+    link: 'https://developer.amazon.com/en-US/blogs/alexa/device-makers/2022/01/ces-frustration-free-setup-matter',
     date: '2022'
   },
   {
@@ -48,7 +48,7 @@ export const workProjects: Project[] = [
     title: 'Wifi Simple Reconnect',
     description: 'Wifi simple reconnect aims to simplify updating network credentials for a customer\'s compatible smart devices. As a customer, updating all your connected devices\' wifi credentials can be a painful experience when moving to a new building, changing internet service providers, or simply updating wifi passwords for security reasons.',
     images: ['/placeholder.svg'],
-    link: '',
+    link: 'https://developer.amazon.com/en-US/blogs/alexa/device-makers/2020/09/Frustration-Free-Setup-Expands-Features-Protocols-and-Simplifies-Onboarding',
     date: '2021'
   },
   {
@@ -56,7 +56,7 @@ export const workProjects: Project[] = [
     title: 'Verizon Critical Asset Sensor',
     description: 'Lead product manager for Verizon\'s first 1P B2B product, the Critical Asset Sensor. The solution includes a multi-sensor device, access to data stream APIs, and Verizon 4G LTE-M M2M connectivity, all bundled together. Deploy multi-sensor devices in the field without having to worry about devices, connectivity, protocols, or security.',
     images: [new URL('../assets/cas-1.png', import.meta.url).href],
-    link: '',
+    link: 'https://thingspace.verizon.com/documentation/iot-devices/critical-asset-sensor.html',
     date: '2020'
   },
   {
@@ -64,7 +64,7 @@ export const workProjects: Project[] = [
     title: 'Gizmo Pal Watch',
     description: 'Owned product requirements and development for GizmoPal watch at Verizon.',
     images: [new URL('../assets/gizmo-pal-1.jpg', import.meta.url).href],
-    link: '',
+    link: 'https://www.verizon.com/connected-smartwatches/verizon-gizmowatch-2/',
     date: '2019'
   },
   {
@@ -72,7 +72,7 @@ export const workProjects: Project[] = [
     title: 'ThingSpace Ready',
     description: 'Led Product for ThingSpace Ready. TS-R was designed to help cellular IoT solutions get to market quickly, reliably and cost effectively. Access everything you need, including transparent pricing, design house and system integrator support, free certification support and bill-initiated credits.',
     images: ['/placeholder.svg'],
-    link: '',
+    link: 'https://thingspace.verizon.com/ready',
     date: '2018'
   },
   {
@@ -80,7 +80,7 @@ export const workProjects: Project[] = [
     title: 'Verizon Wear24',
     description: 'Lead software product manager for the Wear24 watch.',
     images: [new URL('../assets/wear24-1.png', import.meta.url).href],
-    link: '',
+    link: 'https://www.phonescoop.com/articles/article.php?a=19172',
     date: '2017'
   }
 ];
