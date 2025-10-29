@@ -1,12 +1,41 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Hero } from "@/components/Hero";
+import { ProjectGallery } from "@/components/ProjectGallery";
+import { ChatWidget } from "@/components/ChatWidget";
+import { workProjects, sideProjects, patents } from "@/data/projects";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen">
+      <Hero />
+      
+      <ProjectGallery 
+        id="work"
+        title="Work Projects"
+        description="Products and platforms that have impacted millions of users"
+        projects={workProjects}
+      />
+      
+      <ProjectGallery 
+        id="side"
+        title="Side Projects"
+        description="Personal explorations and open-source contributions"
+        projects={sideProjects}
+      />
+      
+      <ProjectGallery 
+        id="patents"
+        title="Patent Portfolio"
+        description="Innovations in IoT, AI, and distributed systems"
+        projects={patents}
+      />
+
+      <ChatWidget />
+      
+      <footer className="py-12 px-6 border-t border-border">
+        <div className="max-w-7xl mx-auto text-center text-muted-foreground">
+          <p>© 2025 Quentin. Building technology people love.</p>
+        </div>
+      </footer>
     </div>
   );
 };
