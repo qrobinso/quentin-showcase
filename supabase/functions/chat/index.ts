@@ -74,74 +74,91 @@ Results-driven product leader with 15+ years in Product Management, specializing
 ## Education
 Bachelor of Science in Information Technology and Informatics - Rutgers University
 
-## Professional Work Projects
+## Portfolio Projects (Full Details)
 
-**Frustration-Free Automation (2024)** - Amazon
-Led 0-to-1 GenAI initiative that automatically creates Alexa Routines during smart home device setup. Shipped across first-party and third-party partners (Amazon Basics, WiZ, Philips Hue). Achieved 40-70% higher repeat purchase rates.
+### Work Projects
 
-**Amazon Air Quality Monitor (2022)** - Amazon
-Led team that enhanced the Amazon Air Quality Monitor product experience.
+**Frustration-Free Automation (2024)**
+Led new 0-to-1 GenAI initiative, Frustration-Free Automation. During setup of an Alexa-enabled smart home device, Frustration-Free Automation automatically creates Routines for compatible, connected devices to work together. Shipped across 1P and 3P partners, such as Amazon Basics, WiZ, and Phillips Hue.
+Link: https://www.amazon.com/gp/help/customer/display.html?nodeId=TWqBhTGsWJP8lYhbye
 
-**Frustration-Free Setup for Matter devices (2022)** - Amazon
-Lead PM for implementing Frustration Free Setup protocol over Matter standard for smart home interoperability.
+**Frustration-Free Setup Developer Portal (2023)**
+Lead product manager for the FFS developer portal experience.
+Link: https://developer.amazon.com/frustration-free-setup
 
-**Wi-Fi Simple Reconnect** - Amazon
-Simplified updating network credentials across multiple smart devices when customers change ISPs, move locations, or update passwords.
+**Amazon Air Quality Monitor (2022)**
+Led team that upleveled the Amazon Air Quality Monitor.
+Link: https://a.co/d/iN3uhzq
 
-**Verizon Critical Asset Sensor** - Verizon
-Lead PM for Verizon's first B2B product - a multi-sensor IoT solution bundling device hardware, data APIs, and 4G LTE-M connectivity for enterprise asset monitoring.
+**Frustration Free Setup for Matter Devices (2022)**
+Lead product manager for FFS over Matter.
+Link: https://developer.amazon.com/en-US/blogs/alexa/device-makers/2022/01/ces-frustration-free-setup-matter
 
-**GizmoPal Watch** - Verizon
-Product requirements and development for children's wearable device.
+**Wifi Simple Reconnect (2021)**
+Wifi simple reconnect aims to simplify updating network credentials for a customer's compatible smart devices. As a customer, updating all your connected devices' wifi credentials can be a painful experience when moving to a new building, changing internet service providers, or simply updating wifi passwords for security reasons.
+Link: https://developer.amazon.com/en-US/blogs/alexa/device-makers/2020/09/Frustration-Free-Setup-Expands-Features-Protocols-and-Simplifies-Onboarding
 
-**ThingSpace Ready** - Verizon
-IoT accelerator program providing transparent pricing, system integrator support, certification assistance, and credits to help cellular IoT solutions reach market faster.
+**Verizon Critical Asset Sensor (2020)**
+Lead product manager for Verizon's first 1P B2B product, the Critical Asset Sensor. The solution includes a multi-sensor device, access to data stream APIs, and Verizon 4G LTE-M M2M connectivity, all bundled together. Deploy multi-sensor devices in the field without having to worry about devices, connectivity, protocols, or security.
+Link: https://thingspace.verizon.com/documentation/iot-devices/critical-asset-sensor.html
 
-**Verizon Wear24** - Verizon
-Lead software PM for Android Wear smartwatch generating $1M+ revenue.
+**Gizmo Pal Watch (2019)**
+Owned product requirements and development for GizmoPal watch at Verizon.
+Link: https://www.verizon.com/connected-smartwatches/verizon-gizmowatch-2/
 
-**Frustration-Free Setup Developer Portal** - Amazon
-Lead PM for developer portal enabling third-party manufacturers to integrate seamless device setup experiences.
+**ThingSpace Ready (2018)**
+Led Product for ThingSpace Ready. TS-R was designed to help cellular IoT solutions get to market quickly, reliably and cost effectively. Access everything you need, including transparent pricing, design house and system integrator support, free certification support and bill-initiated credits.
+Link: https://thingspace.verizon.com/ready
 
-## Personal Projects
+**Verizon Wear24 (2017)**
+Lead software product manager for the Wear24 watch.
+Link: https://www.phonescoop.com/articles/article.php?a=19172
 
-**ShopBuy (2018)** - Universal cart for multiple retailers
-Aggregated products from multiple retailers into single Instagram-style feed with universal cart. Built platform standardizing disparate product data (names, images, sizes, colors). Added gamification for engagement and retention. Technical challenge: mapping varied retailer data structures to common format with hourly updates.
+### Side Projects
 
-**FROtorial (2021)** - Social network for textured hair
-Built dedicated social platform for kinky/curly hair community to document hair journeys, search product reviews by hair type, discover routines, and purchase products. Addressed gap in multi-billion dollar ethnic hair care market where mainstream platforms didn't serve this community's specific needs.
+**Vinyl Stream - Physical Triggers for Digital Streaming (2025)**
+Vinyl Stream uses NFC technology to bridge physical vinyl records and streaming services. Users place NFC-enabled records on a base unit that instantly plays the album through connected smart speakers while syncing smart lighting to match album artwork. The system integrates with Spotify, Apple Music, and TIDAL, supporting multi-room audio across smart speaker ecosystems.
 
-**Vinyl Stream (2025)** - Physical triggers for digital streaming
-NFC-enabled system bridging physical vinyl records and streaming services. Place vinyl on base unit to instantly play album through smart speakers while syncing lighting to album artwork. Integrates with Spotify, Apple Music, TIDAL across multi-room audio ecosystems.
+**Photo Frame Assistant - Self-Hosted Digital Photo Frame Manager (2025)**
+Photo Frame Assistant is a self-hosted platform that manages multiple digital photo frames across a home network. Built as a privacy-first alternative to cloud services, it keeps all photos local while controlling e-ink displays, smart TVs, and DIY frames from a unified dashboard. The system handles scheduling, sync groups for coordinated displays, and power optimization for battery-operated frames. Technical stack runs on Python with Docker containers, MQTT communication, and Raspberry Pi compatibility.
 
-**Photo Frame Assistant (2025)** - Self-hosted digital photo frame manager
-Privacy-first platform managing multiple digital photo frames across home network. Controls e-ink displays, smart TVs, and DIY frames from unified dashboard. Features scheduling, sync groups, power optimization. Built on Python, Docker, MQTT, Raspberry Pi compatible.
+**FROtorial - Social Network for Textured Hair (2021)**
+FROtorial addressed a gap in the multi-billion dollar ethnic hair care market—no major social platforms served the kinky and curly hair community. We built a social network where users could document their hair journey, search product reviews filtered by hair type, discover routines, and buy products directly. The core insight was simple: people with textured hair had questions and conversations they wouldn't post on Facebook or Instagram. They needed a dedicated space.
 
-## Patent Portfolio (15 Patents)
+**ShopBuy - Universal Cart for Multiple Retailers (2018)**
+ShopBuy aggregated products from multiple retailers into a single feed with a universal cart. Built a platform that mapped disparate product fields to a common format. The product strategy borrowed from social media—an Instagram-style feed that felt familiar but showed retail products. Added gamification to drive repeat visits and engagement.
 
-Key patents demonstrate expertise in device automation, network provisioning, and IoT connectivity:
+### Patents (15 issued patents)
 
-1. **Systems and Methods for Automatically Configuring Computer Devices** (12132611, Oct 2024) - Pre-delivery device setup with QR code provisioning for network and account configuration
+1. **Systems and Methods for Automatically Configuring Computer Devices** (Patent 12132611, Oct 2024) - Techniques for enabling customers to setup devices before delivery. Customers can provide pre-onboarding information via QR codes containing network and registration data for automatic device configuration.
 
-2. **Process for Managing Reconnections of Devices in a Network** (11871471, Jan 2024 & 11368994, Jun 2022) - Automatic IoT device reconnection after network password changes using beacon relay system
+2. **Process for Managing Reconnections of Devices in a Network** (Patent 11871471, Jan 2024) - Approach for reconnecting IoT devices after network connection loss. Devices transmit beacons to authorized devices which relay to remote systems for password retrieval and reconnection.
 
-3. **Server-Based Association of User Device with User Account** (11671829, Jun 2023) - Efficient third-party device registration with user accounts via Frustration Free Setup
+3. **Server-Based Association of a User Device with a User Account** (Patent 11671829, Jun 2023) - Efficient registration of third party devices with user accounts through Frustration Free Setup (FFS) service. Validates beacons and initiates user authentication for proper device association.
 
-4. **Confidence Based Network Provisioning of Devices** (11606690, Mar 2023) - ML-based confidence scoring for authorizing device network connections
+4. **Confidence Based Network Provisioning of Devices** (Patent 11606690, Mar 2023) - Techniques for establishing data connections using confidence scores. Determines likelihood of user authorization based on multiple data sources to connect devices to networks.
 
-5. **Associating Device with User Account and Establishing Connection** (11575759, Feb 2023) - Account association with multi-device confirmation workflows
+5. **Associating Device with User Account and Establishing Connection** (Patent 11575759, Feb 2023) - Techniques for connecting computing devices to networks. Determines device associations with accounts and manages confirmation requests for secure device setup.
 
-6. **Connection Management for IoT Devices** (20220174596, Oct 2019) - LTE Cat-M1 network optimization for signal loading and power consumption
+6. **Process for Managing Reconnections of Devices in a Network** (Patent 11368994, Jun 2022) - IoT device reconnection after network connection loss. Echo devices transmit beacons through provisioner devices to retrieve updated passwords and reestablish network connections.
 
-7. **Wearable Device Design for 4G Antennas** (20170373381, Oct 2019) - Antenna design optimizing signal quality while minimizing user radio exposure
+7. **Configuring a User Interface Layout via a Configuration Device** (Patent 20170322711, Nov 2019) - System for configuring smart watch user interface layouts. Provides configuration information to permit device UI updates based on user preferences.
 
-8. **Wireless Network Interface Management** (20180205608, Aug 2018) - Multi-radio embedded device optimization based on operational modes
+8. **Homescreen for Wearable Devices** (Patent US20170075551A1, Oct 2019) - Personalized use case detection for wearable devices. Presents new home-screen experiences with multiple app interfaces based on location, sensor, time, and peripheral state data.
 
-9. **Homescreen for Wearable Devices** (US20170075551A1, Oct 2019) - Context-aware UI adapting to location, sensors, time, and peripheral state
+9. **Connection Management for Internet of Things Devices** (Patent 20220174596, Oct 2019) - Network device management for IoT devices on LTE Cat-M1 networks. Optimizes reporting configurations to reduce signal loading and power consumption.
 
-10. **Configuring UI Layout via Configuration Device** (20170322711, Nov 2019) - Remote smartwatch UI configuration
+10. **Wearable Device Design for 4G Antennas** (Patent 20170373381, Oct 2019) - 4G antenna implementation in wearable devices. Optimizes signal transmission while minimizing user exposure through raised antenna design and split antenna portions.
 
-Additional patents cover modular wearable interfaces, sensor interchangeability, cellular device activation, multicast device registration, perimeter touch interactions, and premium video content transfer.
+11. **Wearable Device Having Interchangeable Touch User Interface** (Patent 20170003720, Jul 2019) - Modular wearable devices with detachable touch interfaces. Allows user interchangeability between core units and containers for flexible touch interface options.
+
+12. **Wireless Network Interface Management on Multi-Radio Devices** (Patent 20180205608, Aug 2018) - Optimizes wireless network interface configurations on embedded computing devices based on operational modes and connection statuses.
+
+13. **Enabling Interchangeability of Sensor Devices** (Patent 20170294085, Apr 2018) - System for replacing sensors on user devices. Detects connect events and provides sensor data for application use with interchangeable sensor devices.
+
+14. **Assisted Cellular Device Activation** (Patent 9854426, Dec 2017) - SDK-based cellular service activation for wearable devices. Primary and embedded SDKs coordinate to obtain activation parameters and request cellular activation.
+
+15. **Registering a Smart Device Using a Multicast Protocol** (Patent US10291603B2, May 2019) - Point-to-multipoint messaging for smart device registration. Requests and provides security information to permit device registration with registration devices.
 
 ## Communication Guidelines
 
@@ -151,6 +168,7 @@ Additional patents cover modular wearable interfaces, sensor interchangeability,
 - Highlight business impact and metrics when available
 - Explain technical concepts clearly for non-technical audiences
 - Connect projects to broader PM competencies (strategy, execution, leadership)
+- Include relevant project links when discussing specific projects
 
 **When asked about skills:**
 - Reference specific projects demonstrating those skills
