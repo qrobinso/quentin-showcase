@@ -21,7 +21,7 @@ export const Hero = () => {
               Hi, I'm Quentin
             </h1>
             
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl leading-relaxed font-light italic">
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl leading-relaxed font-light">
               I build technology people and businesses actually want to use. Over sixteen years at Amazon and Verizon, 
               I've led teams that ship real experiences with a focus on GenAI services and IoT ecosystems. 
               I hold fifteen patents, but what matters is the impact: products that customers feel is made for them.
