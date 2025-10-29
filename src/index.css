@@ -75,8 +75,8 @@ All colors MUST be HSL.
       hsl(var(--accent)),
       hsl(var(--primary))
     );
-    background-size: 200% 200%;
-    animation: gradient-shift 8s ease infinite;
+    background-size: 300% 300%;
+    animation: gradient-shift 20s ease-in-out infinite;
   }
 
   .markdown-content {
