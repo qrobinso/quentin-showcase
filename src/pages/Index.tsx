@@ -37,7 +37,7 @@ const Index = () => {
 
       <ChatWidget isOpen={isChatOpen} setIsOpen={setIsChatOpen} />
       
-      <footer className="py-12 px-6 border-t border-border">
+      <footer className="pt-12 pb-32 px-6 border-t border-border">
         <div className="max-w-7xl mx-auto text-center text-muted-foreground">
           <p>© 2025 Quentin. Building technology people love.</p>
         </div>
