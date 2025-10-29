@@ -84,14 +84,14 @@ export const ChatWidget = ({
       setIsLoading(false);
     }
   };
-  return <div className="fixed bottom-0 left-0 right-0 z-50 border-t border-primary/20 bg-primary text-primary-foreground">
+  return <div className="fixed bottom-0 left-0 right-0 z-50 border-t border-primary/20 animated-gradient-bg text-primary-foreground">
       {/* Chat Messages Window */}
-      {isOpen && <div className="max-w-7xl mx-auto h-[400px] flex flex-col animate-in slide-in-from-bottom-4 duration-300">
+      {isOpen && <div className="max-w-7xl mx-auto h-[400px] flex flex-col animate-in slide-in-from-bottom-4 duration-300 backdrop-blur-sm bg-primary/30">
           {/* Messages */}
           <ScrollArea className="flex-1 p-4">
             <div className="space-y-4">
               {messages.map((message, idx) => <div key={idx} className={`flex ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}>
-                  <div className={`max-w-[80%] rounded-lg px-4 py-2 ${message.role === 'user' ? 'bg-primary-foreground text-primary' : 'bg-primary-foreground/10 text-primary-foreground border border-primary-foreground/20'}`}>
+                  <div className={`max-w-[80%] rounded-lg px-4 py-2 backdrop-blur-md ${message.role === 'user' ? 'bg-primary-foreground text-primary' : 'bg-primary-foreground/10 text-primary-foreground border border-primary-foreground/20'}`}>
                     <div className="text-sm markdown-content">
                       <ReactMarkdown>{message.content}</ReactMarkdown>
                     </div>
@@ -99,7 +99,7 @@ export const ChatWidget = ({
                 </div>)}
               {isLoading && (
                 <div className="flex justify-start">
-                  <div className="max-w-[80%] rounded-lg px-4 py-2 bg-primary-foreground/10 border border-primary-foreground/20">
+                  <div className="max-w-[80%] rounded-lg px-4 py-2 bg-primary-foreground/10 border border-primary-foreground/20 backdrop-blur-md">
                     <div className="space-y-2">
                       <Skeleton className="h-4 w-[250px] bg-primary-foreground/20" />
                       <Skeleton className="h-4 w-[200px] bg-primary-foreground/20" />
