@@ -26,7 +26,7 @@ export const Hero = () => {
           label: 'Products Launched',
           value: '11'
         }, {
-          label: 'Customers Impacted',
+          label: 'Customers Delighted',
           value: '250M'
         }, {
           label: 'Patents',
