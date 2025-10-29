@@ -116,7 +116,12 @@ export const sideProjects: Project[] = [
     id: 'shopbuy',
     title: 'ShopBuy - Universal Cart for Multiple Retailers',
     description: 'ShopBuy aggregated products from multiple retailers into a single feed with a universal cart. Built a platform that mapped disparate product fields to a common format. The product strategy borrowed from social media—an Instagram-style feed that felt familiar but showed retail products. Added gamification to drive repeat visits and engagement.',
-    images: ['/placeholder.svg'],
+    images: [
+      new URL('../assets/shopbuy-1.avif', import.meta.url).href,
+      new URL('../assets/shopbuy-2.avif', import.meta.url).href,
+      new URL('../assets/shopbuy-3.avif', import.meta.url).href,
+      new URL('../assets/shopbuy-4.avif', import.meta.url).href
+    ],
     link: '',
     date: '2018'
   }
