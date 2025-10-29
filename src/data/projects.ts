@@ -12,7 +12,10 @@ export const workProjects: Project[] = [
     id: 'ffa',
     title: 'Frustration-Free Automation',
     description: 'Led new 0-to-1 GenAI initiative, Frustration-Free Automation. During setup of an Alexa-enabled smart home device, Frustration-Free Automation automatically creates Routines for compatible, connected devices to work together. Shipped across 1P and 3P partners, such as Amazon Basics, WiZ, and Phillips Hue.',
-    images: ['/placeholder.svg'],
+    images: [
+      new URL('../assets/ffa-1.jpg', import.meta.url).href,
+      new URL('../assets/ffa-2.jpg', import.meta.url).href
+    ],
     link: '',
     date: '2024'
   },
