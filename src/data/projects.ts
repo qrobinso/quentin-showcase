@@ -39,7 +39,7 @@ export const workProjects: Project[] = [
     id: 'ffs-matter',
     title: 'Frustration Free Setup for Matter Devices',
     description: 'Lead product manager for FFS over Matter.',
-    images: ['/placeholder.svg'],
+    images: [new URL('../assets/ffs-matter-1.png', import.meta.url).href],
     link: '',
     date: '2022'
   },
