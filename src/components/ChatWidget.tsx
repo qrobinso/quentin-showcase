@@ -27,7 +27,14 @@ const SAMPLE_PROMPTS = [
   "Does Quentin have any awards or recognition?",
   "What's Quentin's approach to product development?",
   "Has Quentin worked at any notable companies?",
-  "What skills make Quentin stand out as a product leader?"
+  "What skills make Quentin stand out as a product leader?",
+  "What is Frustration-Free Automation and how does it work?",
+  "Tell me about Quentin's work with smart home devices",
+  "What products has Quentin launched at Amazon?",
+  "Has Quentin worked on any IoT solutions?",
+  "Tell me about Quentin's experience with wearable devices",
+  "What B2B IoT products has Quentin built at Verizon?",
+  "Has Quentin worked with Matter or other smart home protocols?",
 ];
 interface Message {
   role: 'user' | 'assistant';
