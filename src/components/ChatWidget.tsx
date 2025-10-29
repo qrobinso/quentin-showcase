@@ -79,7 +79,12 @@ export const ChatWidget = ({
         // Wait 3-4 seconds then clear and move to next prompt
         setTimeout(() => {
           setPlaceholderText('');
-          setCurrentPromptIndex((prev) => (prev + 1) % SAMPLE_PROMPTS.length);
+          // Select a random prompt different from the current one
+          let nextIndex;
+          do {
+            nextIndex = Math.floor(Math.random() * SAMPLE_PROMPTS.length);
+          } while (nextIndex === currentPromptIndex && SAMPLE_PROMPTS.length > 1);
+          setCurrentPromptIndex(nextIndex);
         }, 3500);
       }
     }, 50);
