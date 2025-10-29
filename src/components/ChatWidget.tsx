@@ -45,6 +45,11 @@ export const ChatWidget = ({
     const userMessage = input.trim();
     setInput('');
     
+    // Automatically open chat window when user sends a message
+    if (!isOpen) {
+      setIsOpen(true);
+    }
+    
     // Add user message
     const newMessages = [...messages, { role: 'user' as const, content: userMessage }];
     setMessages(newMessages);
