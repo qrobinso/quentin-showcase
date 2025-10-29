@@ -79,7 +79,7 @@ export const workProjects: Project[] = [
     id: 'wear24',
     title: 'Verizon Wear24',
     description: 'Lead software product manager for the Wear24 watch.',
-    images: ['/placeholder.svg'],
+    images: [new URL('../assets/wear24-1.png', import.meta.url).href],
     link: '',
     date: '2017'
   }
