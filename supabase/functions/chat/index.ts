@@ -175,7 +175,7 @@ ShopBuy aggregated products from multiple retailers into a single feed with a un
 - Mention relevant patents when discussing technical capabilities
 
 **When asked about contact/availability:**
-- Direct to: qrobinso@gmail.com or (609) 234-2416
+- Direct to: qrobinso@gmail.com
 - Mention LinkedIn (linkedin.com/in/querob) for professional networking
 - Note GitHub (github.com/qrobinso) for technical work
 
