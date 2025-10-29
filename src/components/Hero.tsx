@@ -33,7 +33,6 @@ export const Hero = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto md:mx-0 pt-8">
           {[
             { label: 'Years of Experience', value: '16+' },
-            { label: 'Products Launched', value: '11' },
             { label: 'Customers Impacted', value: '250M' },
             { label: 'Patents', value: '15' },
           ].map((stat) => (
@@ -46,6 +45,43 @@ export const Hero = () => {
               </div>
             </div>
           ))}
+          
+          {/* Products Launched with breakdown */}
+          <div className="space-y-2 text-center md:text-left col-span-2 md:col-span-1">
+            <div className="text-4xl md:text-5xl font-serif font-bold text-accent">
+              11
+            </div>
+            <div className="text-sm text-muted-foreground uppercase tracking-wider mb-4">
+              Products Launched
+            </div>
+            
+            {/* Visual breakdown */}
+            <div className="relative flex justify-center md:justify-start gap-6 mt-4 pt-4">
+              {/* Connecting lines */}
+              <svg className="absolute top-0 left-1/2 md:left-8 -translate-x-1/2 md:translate-x-0 w-32 h-12" viewBox="0 0 128 48">
+                {/* Main vertical line */}
+                <line x1="64" y1="0" x2="64" y2="20" stroke="hsl(var(--primary))" strokeWidth="2" opacity="0.4" />
+                {/* Left branch */}
+                <line x1="64" y1="20" x2="32" y2="20" stroke="hsl(var(--primary))" strokeWidth="2" opacity="0.4" />
+                <line x1="32" y1="20" x2="32" y2="48" stroke="hsl(var(--primary))" strokeWidth="2" opacity="0.4" />
+                {/* Right branch */}
+                <line x1="64" y1="20" x2="96" y2="20" stroke="hsl(var(--primary))" strokeWidth="2" opacity="0.4" />
+                <line x1="96" y1="20" x2="96" y2="48" stroke="hsl(var(--primary))" strokeWidth="2" opacity="0.4" />
+              </svg>
+              
+              {/* Labels */}
+              <div className="flex gap-12 pt-12 relative z-10">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-primary">5</div>
+                  <div className="text-xs text-muted-foreground uppercase tracking-wider">Devices</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-primary">6</div>
+                  <div className="text-xs text-muted-foreground uppercase tracking-wider">Services</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="flex gap-4 justify-center md:justify-start pt-8">
