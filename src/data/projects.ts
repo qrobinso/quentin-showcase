@@ -11,7 +11,7 @@ export const workProjects: Project[] = [
   {
     id: 'ffa',
     title: 'Frustration-Free Automation',
-    description: 'Led new 0-to-1 GenAI initiative that automatically creates Routines for compatible smart home devices during setup. Shipped across 1P and 3P partners including Amazon Basics, WiZ, and Phillips Hue.',
+    description: 'Led new 0-to-1 GenAI initiative, Frustration-Free Automation. During setup of an Alexa-enabled smart home device, Frustration-Free Automation automatically creates Routines for compatible, connected devices to work together. Shipped across 1P and 3P partners, such as Amazon Basics, WiZ, and Phillips Hue.',
     images: ['/placeholder.svg'],
     link: '',
     date: '2024'
@@ -19,7 +19,7 @@ export const workProjects: Project[] = [
   {
     id: 'air-quality',
     title: 'Amazon Air Quality Monitor',
-    description: 'Led team that upleveled the Amazon Air Quality Monitor, bringing advanced environmental sensing capabilities to customers.',
+    description: 'Led team that upleveled the Amazon Air Quality Monitor.',
     images: ['/placeholder.svg'],
     link: '',
     date: '2022'
@@ -27,39 +27,96 @@ export const workProjects: Project[] = [
   {
     id: 'cas',
     title: 'Verizon Critical Asset Sensor',
-    description: 'Lead PM for Verizon\'s first 1P B2B product. Multi-sensor device with data stream APIs and 4G LTE-M connectivity bundled together. Deploy sensors without worrying about devices, connectivity, protocols, or security.',
+    description: 'Lead product manager for Verizon\'s first 1P B2B product, the Critical Asset Sensor. The solution includes a multi-sensor device, access to data stream APIs, and Verizon 4G LTE-M M2M connectivity, all bundled together. Deploy multi-sensor devices in the field without having to worry about devices, connectivity, protocols, or security.',
+    images: ['/placeholder.svg'],
+    link: '',
+    date: '2020'
+  },
+  {
+    id: 'ffs-matter',
+    title: 'Frustration Free Setup for Matter Devices',
+    description: 'Lead product manager for FFS over Matter.',
+    images: ['/placeholder.svg'],
+    link: '',
+    date: '2022'
+  },
+  {
+    id: 'wifi-reconnect',
+    title: 'Wifi Simple Reconnect',
+    description: 'Wifi simple reconnect aims to simplify updating network credentials for a customer\'s compatible smart devices. As a customer, updating all your connected devices\' wifi credentials can be a painful experience when moving to a new building, changing internet service providers, or simply updating wifi passwords for security reasons.',
     images: ['/placeholder.svg'],
     link: '',
     date: '2021'
+  },
+  {
+    id: 'gizmo-pal',
+    title: 'Gizmo Pal Watch',
+    description: 'Owned product requirements and development for GizmoPal watch at Verizon.',
+    images: ['/placeholder.svg'],
+    link: '',
+    date: '2019'
+  },
+  {
+    id: 'thingspace',
+    title: 'ThingSpace Ready',
+    description: 'Led Product for ThingSpace Ready. TS-R was designed to help cellular IoT solutions get to market quickly, reliably and cost effectively. Access everything you need, including transparent pricing, design house and system integrator support, free certification support and bill-initiated credits.',
+    images: ['/placeholder.svg'],
+    link: '',
+    date: '2018'
+  },
+  {
+    id: 'wear24',
+    title: 'Verizon Wear24',
+    description: 'Lead software product manager for the Wear24 watch.',
+    images: ['/placeholder.svg'],
+    link: '',
+    date: '2017'
+  },
+  {
+    id: 'ffs-portal',
+    title: 'Frustration-Free Setup Developer Portal',
+    description: 'Lead product manager for the FFS developer portal experience.',
+    images: ['/placeholder.svg'],
+    link: '',
+    date: '2023'
   }
 ];
 
 export const sideProjects: Project[] = [
   {
-    id: 'frotorial',
-    title: 'FROtorial - Social Network for Textured Hair',
-    description: 'Built a dedicated social network for the kinky and curly hair community to document hair journeys, search product reviews by hair type, discover routines, and buy products directly. Addressed a gap in the multi-billion dollar ethnic hair care market.',
+    id: 'shopbuy',
+    title: 'ShopBuy - Universal Cart for Multiple Retailers',
+    description: 'ShopBuy aggregated products from multiple retailers into a single feed with a universal cart. Built a platform that mapped disparate product fields to a common format. The product strategy borrowed from social media—an Instagram-style feed that felt familiar but showed retail products. Added gamification to drive repeat visits and engagement.',
     images: ['/placeholder.svg'],
     link: '',
-    date: '2023'
+    date: '2018'
+  },
+  {
+    id: 'frotorial',
+    title: 'FROtorial - Social Network for Textured Hair',
+    description: 'FROtorial addressed a gap in the multi-billion dollar ethnic hair care market—no major social platforms served the kinky and curly hair community. We built a social network where users could document their hair journey, search product reviews filtered by hair type, discover routines, and buy products directly. The core insight was simple: people with textured hair had questions and conversations they wouldn\'t post on Facebook or Instagram. They needed a dedicated space.',
+    images: ['/placeholder.svg'],
+    link: '',
+    date: '2021'
   },
   {
     id: 'vinyl-stream',
     title: 'Vinyl Stream - Physical Triggers for Digital Streaming',
-    description: 'NFC-enabled system that bridges physical vinyl records and streaming services. Place records on a base unit to instantly play albums through smart speakers while syncing lighting to album artwork. Integrates with Spotify, Apple Music, and TIDAL with multi-room audio support.',
+    description: 'Vinyl Stream uses NFC technology to bridge physical vinyl records and streaming services. Users place NFC-enabled records on a base unit that instantly plays the album through connected smart speakers while syncing smart lighting to match album artwork. The system integrates with Spotify, Apple Music, and TIDAL, supporting multi-room audio across smart speaker ecosystems.',
     images: ['/placeholder.svg'],
     link: '',
-    date: '2024'
+    date: '2025'
   },
   {
     id: 'photo-frame',
     title: 'Photo Frame Assistant - Self-Hosted Digital Photo Frame Manager',
-    description: 'Privacy-first platform managing multiple digital photo frames across home networks. Controls e-ink displays, smart TVs, and DIY frames from a unified dashboard. Features scheduling, sync groups, and power optimization. Built with Python, Docker, MQTT, and Raspberry Pi.',
+    description: 'Photo Frame Assistant is a self-hosted platform that manages multiple digital photo frames across a home network. Built as a privacy-first alternative to cloud services, it keeps all photos local while controlling e-ink displays, smart TVs, and DIY frames from a unified dashboard. The system handles scheduling, sync groups for coordinated displays, and power optimization for battery-operated frames. Technical stack runs on Python with Docker containers, MQTT communication, and Raspberry Pi compatibility.',
     images: ['/placeholder.svg'],
     link: '',
-    date: '2023'
+    date: '2025'
   }
 ];
+
 
 export const patents: Project[] = [
   {
