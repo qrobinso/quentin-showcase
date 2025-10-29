@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Github } from "lucide-react";
 import profileImage from "@/assets/profile.png";
 
 export const Hero = () => {
@@ -56,6 +56,16 @@ export const Hero = () => {
             asChild
           >
             <a href="#work">View My Work</a>
+          </Button>
+          <Button 
+            variant="outline" 
+            size="lg"
+            className="border-border hover:bg-accent hover:text-accent-foreground"
+            asChild
+          >
+            <a href="https://github.com/qrobinso" target="_blank" rel="noopener noreferrer">
+              <Github className="mr-2 h-4 w-4" /> GitHub
+            </a>
           </Button>
           <Button 
             variant="outline" 
