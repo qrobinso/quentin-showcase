@@ -9,6 +9,12 @@ import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 import { useIsMobile } from "@/hooks/use-mobile";
 import ReactMarkdown from "react-markdown";
+
+const SAMPLE_PROMPTS = [
+  "What's Quentin's largest program?",
+  "What B2B services has Quentin worked on?",
+  "Tell me more about his side projects?"
+];
 interface Message {
   role: 'user' | 'assistant';
   content: string;
@@ -27,6 +33,8 @@ export const ChatWidget = ({
   }]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [placeholderText, setPlaceholderText] = useState('');
+  const [currentPromptIndex, setCurrentPromptIndex] = useState(0);
   const { toast } = useToast();
   const isMobile = useIsMobile();
   const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -38,6 +46,32 @@ export const ChatWidget = ({
   useEffect(() => {
     scrollToBottom();
   }, [messages]);
+
+  // Typing animation effect
+  useEffect(() => {
+    if (input) return; // Don't animate if user is typing
+    
+    const currentPrompt = SAMPLE_PROMPTS[currentPromptIndex];
+    let charIndex = 0;
+    
+    // Type characters one by one
+    const typingInterval = setInterval(() => {
+      if (charIndex < currentPrompt.length) {
+        setPlaceholderText(currentPrompt.slice(0, charIndex + 1));
+        charIndex++;
+      } else {
+        clearInterval(typingInterval);
+        
+        // Wait 3-4 seconds then clear and move to next prompt
+        setTimeout(() => {
+          setPlaceholderText('');
+          setCurrentPromptIndex((prev) => (prev + 1) % SAMPLE_PROMPTS.length);
+        }, 3500);
+      }
+    }, 50);
+    
+    return () => clearInterval(typingInterval);
+  }, [currentPromptIndex, input]);
 
   const handleSend = async () => {
     if (!input.trim() || isLoading) return;
@@ -136,7 +170,7 @@ export const ChatWidget = ({
                   value={input} 
                   onChange={e => setInput(e.target.value)} 
                   onKeyPress={e => e.key === 'Enter' && !isLoading && handleSend()} 
-                  placeholder="Ask me anything about Quentin's career, projects, and patents..." 
+                  placeholder={placeholderText || "Ask me anything..."} 
                   className="flex-1 bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50"
                   disabled={isLoading}
                 />
