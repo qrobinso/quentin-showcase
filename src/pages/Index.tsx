@@ -1,3 +1,4 @@
+import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { ProjectGallery } from "@/components/ProjectGallery";
 import { PatentTable } from "@/components/PatentTable";
@@ -7,6 +8,7 @@ import { workProjects, sideProjects, patents } from "@/data/projects";
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <Header />
       <Hero />
       
       <ProjectGallery 
