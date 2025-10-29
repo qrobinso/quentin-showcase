@@ -8,7 +8,7 @@ export const Hero = () => {
       <div className="max-w-5xl mx-auto space-y-12 fade-in">
         {/* Profile Image and Name */}
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-          <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-accent shadow-2xl flex-shrink-0">
+          <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-primary shadow-2xl flex-shrink-0">
             <img 
               src={profileImage} 
               alt="Quentin" 
