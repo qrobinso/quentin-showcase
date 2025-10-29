@@ -200,7 +200,7 @@ export const ChatWidget = ({
                   onChange={e => setInput(e.target.value)} 
                   onKeyPress={e => e.key === 'Enter' && !isLoading && handleSend()} 
                   placeholder={placeholderText || "Ask me anything..."} 
-                  className="flex-1 bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50"
+                  className="flex-1 bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/80"
                   disabled={isLoading}
                 />
                 <Button 
