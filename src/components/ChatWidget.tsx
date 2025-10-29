@@ -11,9 +11,23 @@ import { useIsMobile } from "@/hooks/use-mobile";
 import ReactMarkdown from "react-markdown";
 
 const SAMPLE_PROMPTS = [
-  "What's Quentin's largest program?",
+  "What's Quentin's largest customer facing impact?",
   "What B2B services has Quentin worked on?",
-  "Tell me more about his side projects?"
+  "This portfolio page is cool, is it available on Github?",
+  "How can I get in contact with Quentin?",
+  "What's his latest work?",
+  "What does he do for fun?",
+  "Would Quentin be a great fit for my company?",
+  "Tell me more about his side projects",
+  "What consumer electronics has Quentin built?",
+  "Does Quentin have experience leading product teams?",
+  "What technologies does Quentin specialize in?",
+  "Can you share examples of Quentin's product launches?",
+  "What industries has Quentin worked in?",
+  "Does Quentin have any awards or recognition?",
+  "What's Quentin's approach to product development?",
+  "Has Quentin worked at any notable companies?",
+  "What skills make Quentin stand out as a product leader?"
 ];
 interface Message {
   role: 'user' | 'assistant';
