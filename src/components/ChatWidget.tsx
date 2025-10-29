@@ -93,10 +93,13 @@ export const ChatWidget = ({
   }, [currentPromptIndex, input]);
 
   const handleSend = async () => {
-    if (!input.trim() || isLoading) return;
+    // Use the placeholder text if input is empty
+    const messageToSend = input.trim() || placeholderText;
+    if (!messageToSend || isLoading) return;
 
-    const userMessage = input.trim();
+    const userMessage = messageToSend;
     setInput('');
+    setPlaceholderText(''); // Clear placeholder after using it
     
     // Automatically open chat window when user sends a message
     if (!isOpen) {
