@@ -95,7 +95,13 @@ export const sideProjects: Project[] = [
     id: 'photo-frame',
     title: 'Photo Frame Assistant - Self-Hosted Digital Photo Frame Manager',
     description: 'Photo Frame Assistant is a self-hosted platform that manages multiple digital photo frames across a home network. Built as a privacy-first alternative to cloud services, it keeps all photos local while controlling e-ink displays, smart TVs, and DIY frames from a unified dashboard. The system handles scheduling, sync groups for coordinated displays, and power optimization for battery-operated frames. Technical stack runs on Python with Docker containers, MQTT communication, and Raspberry Pi compatibility.',
-    images: ['/placeholder.svg'],
+    images: [
+      new URL('../assets/photo-frame-1.jpg', import.meta.url).href,
+      new URL('../assets/photo-frame-2.jpg', import.meta.url).href,
+      new URL('../assets/photo-frame-3.jpg', import.meta.url).href,
+      new URL('../assets/photo-frame-4.jpg', import.meta.url).href,
+      new URL('../assets/photo-frame-5.jpg', import.meta.url).href
+    ],
     link: '',
     date: '2025'
   },
