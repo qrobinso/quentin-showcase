@@ -48,7 +48,7 @@ export const Hero = () => {
           ))}
         </div>
 
-        <div className="flex gap-4 justify-center md:justify-start pt-8">
+        <div className="flex flex-col md:flex-row gap-4 justify-center md:justify-start pt-8">
           <Button 
             variant="default" 
             size="lg"
