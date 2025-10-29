@@ -63,7 +63,7 @@ export const workProjects: Project[] = [
     id: 'gizmo-pal',
     title: 'Gizmo Pal Watch',
     description: 'Owned product requirements and development for GizmoPal watch at Verizon.',
-    images: ['/placeholder.svg'],
+    images: [new URL('../assets/gizmo-pal-1.jpg', import.meta.url).href],
     link: '',
     date: '2019'
   },
