@@ -10,16 +10,16 @@ interface PatentTableProps {
 
 export const PatentTable = ({ title, description, patents, id }: PatentTableProps) => {
   return (
-    <section id={id} className="py-24 px-6">
+    <section id={id} className="py-24 px-6" aria-labelledby="patents-heading">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16 space-y-4">
-          <h2 className="text-5xl md:text-6xl font-serif font-bold text-foreground">
+        <header className="text-center mb-16 space-y-4">
+          <h2 id="patents-heading" className="text-5xl md:text-6xl font-serif font-bold text-foreground">
             {title}
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             {description}
           </p>
-        </div>
+        </header>
 
         <div className="rounded-lg border border-border overflow-hidden bg-card shadow-lg">
           <Table>

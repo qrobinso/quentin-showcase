@@ -87,10 +87,10 @@ export const ProjectGallery = ({ title, description, projects, id }: ProjectGall
   const currentModalProject = projects.find(p => p.id === modalState.projectId);
 
   return (
-    <section id={id} className="py-24 px-6">
+    <section id={id} className="py-24 px-6" aria-labelledby={`${id}-heading`}>
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16 space-y-4">
-          <h2 className="text-5xl md:text-6xl font-serif font-bold text-foreground">
+        <header className="text-center mb-16 space-y-4">
+          <h2 id={`${id}-heading`} className="text-5xl md:text-6xl font-serif font-bold text-foreground">
             {title}
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -163,7 +163,7 @@ export const ProjectGallery = ({ title, description, projects, id }: ProjectGall
               )}
             </div>
           )}
-        </div>
+        </header>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project) => (

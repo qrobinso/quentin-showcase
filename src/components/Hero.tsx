@@ -2,23 +2,23 @@ import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
 import profileImage from "@/assets/profile.png";
 export const Hero = () => {
-  return <section className="min-h-screen flex items-center justify-center px-6 py-20">
+  return <section className="min-h-screen flex items-center justify-center px-6 py-20" aria-label="Introduction">
       <div className="max-w-5xl mx-auto space-y-12 fade-in">
         {/* Profile Image and Name */}
-        <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+        <header className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
           <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-primary shadow-2xl flex-shrink-0">
-            <img src={profileImage} alt="Quentin" className="w-full h-full object-cover" />
+            <img src={profileImage} alt="Quentin Robinson - Product Leader specializing in IoT and Smart Home technology" className="w-full h-full object-cover" />
           </div>
           
           <div className="text-center md:text-left space-y-6">
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-serif font-bold text-foreground leading-tight">Hi, I'm Quentin.</h1>
+            <h1 className="text-6xl md:text-7xl lg:text-8xl font-serif font-bold text-foreground leading-tight">Hi, I'm Quentin Robinson.</h1>
             
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl leading-relaxed font-light">I'm a product leader who thrives at the intersection of devices and services. I've shipped some of the world's most popular consumer electronics and B2B enterprise services at scale. Let's build the next game changer together.</p>
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl leading-relaxed font-light">I'm a product leader who thrives at the intersection of devices and services. I've shipped some of the world's most popular consumer electronics and B2B enterprise services at scale, including IoT solutions, smart home automation, and wearable technology. Let's build the next game changer together.</p>
           </div>
-        </div>
+        </header>
 
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto md:mx-0 pt-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto md:mx-0 pt-8" role="region" aria-label="Key statistics">
           {[{
           label: 'Years of Experience',
           value: '16+'
@@ -32,7 +32,7 @@ export const Hero = () => {
           label: 'Patents',
           value: '15'
         }].map(stat => <div key={stat.label} className="space-y-2 text-center md:text-left">
-              <div className="text-4xl md:text-5xl font-serif font-bold text-accent">
+              <div className="text-4xl md:text-5xl font-serif font-bold text-accent" aria-label={`${stat.value} ${stat.label}`}>
                 {stat.value}
               </div>
               <div className="text-sm text-muted-foreground uppercase tracking-wider">
