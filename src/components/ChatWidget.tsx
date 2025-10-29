@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "@/hooks/use-toast";
 interface Message {
   role: 'user' | 'assistant';
   content: string;
@@ -21,23 +23,53 @@ export const ChatWidget = ({
     content: "Hi! I'm Quentin's AI assistant. I can answer questions about his career, projects, and patents. What would you like to know?"
   }]);
   const [input, setInput] = useState('');
-  const handleSend = () => {
-    if (!input.trim()) return;
+  const [isLoading, setIsLoading] = useState(false);
+  const { toast } = useToast();
 
-    // Add user message
-    setMessages(prev => [...prev, {
-      role: 'user',
-      content: input
-    }]);
+  const handleSend = async () => {
+    if (!input.trim() || isLoading) return;
 
-    // Simulate AI response
-    setTimeout(() => {
-      setMessages(prev => [...prev, {
-        role: 'assistant',
-        content: "I'm currently a demo assistant. In production, I'll be powered by an AI that knows all about Quentin's 16+ years of experience, 15 patents, and work on GenAI and IoT platforms at Amazon and Verizon."
-      }]);
-    }, 1000);
+    const userMessage = input.trim();
     setInput('');
+    
+    // Add user message
+    const newMessages = [...messages, { role: 'user' as const, content: userMessage }];
+    setMessages(newMessages);
+    setIsLoading(true);
+
+    try {
+      const { data, error } = await supabase.functions.invoke('chat', {
+        body: { messages: newMessages }
+      });
+
+      if (error) throw error;
+
+      if (data?.error) {
+        toast({
+          title: "Error",
+          description: data.error,
+          variant: "destructive",
+        });
+        return;
+      }
+
+      const assistantMessage = data?.choices?.[0]?.message?.content;
+      if (assistantMessage) {
+        setMessages(prev => [...prev, {
+          role: 'assistant',
+          content: assistantMessage
+        }]);
+      }
+    } catch (error) {
+      console.error('Chat error:', error);
+      toast({
+        title: "Error",
+        description: "Failed to get response. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
   return <div className="fixed bottom-0 left-0 right-0 z-50 border-t border-primary/20 bg-primary text-primary-foreground">
       {/* Chat Messages Window */}
@@ -68,8 +100,20 @@ export const ChatWidget = ({
           </Button>
           
           <div className="flex-1 flex gap-2">
-              <Input value={input} onChange={e => setInput(e.target.value)} onKeyPress={e => e.key === 'Enter' && handleSend()} placeholder="Ask me anything about Quentin's career, projects, and patents..." className="flex-1 bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50" />
-              <Button onClick={handleSend} size="default" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90">
+              <Input 
+                value={input} 
+                onChange={e => setInput(e.target.value)} 
+                onKeyPress={e => e.key === 'Enter' && !isLoading && handleSend()} 
+                placeholder="Ask me anything about Quentin's career, projects, and patents..." 
+                className="flex-1 bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50"
+                disabled={isLoading}
+              />
+              <Button 
+                onClick={handleSend} 
+                size="default" 
+                className="bg-primary-foreground text-primary hover:bg-primary-foreground/90"
+                disabled={isLoading}
+              >
                 <Send className="h-4 w-4" />
               </Button>
           </div>
