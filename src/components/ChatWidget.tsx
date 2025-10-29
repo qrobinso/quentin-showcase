@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { MessageCircle, X, Send } from "lucide-react";
+import { Sparkles, X, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -77,9 +77,19 @@ export const ChatWidget = ({ isOpen, setIsOpen }: ChatWidgetProps) => {
             variant="ghost"
             size="default"
             onClick={() => setIsOpen(!isOpen)}
-            className="shrink-0"
+            className="shrink-0 group relative"
           >
-            {isOpen ? <X className="h-5 w-5" /> : <MessageCircle className="h-5 w-5" />}
+            {isOpen ? (
+              <X className="h-5 w-5" />
+            ) : (
+              <div className="flex items-center gap-2">
+                <div className="relative">
+                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full blur-sm opacity-75 group-hover:opacity-100 transition-opacity"></div>
+                  <Sparkles className="h-5 w-5 relative z-10" />
+                </div>
+                <span className="text-sm font-medium">Ask AI</span>
+              </div>
+            )}
           </Button>
           
           <div className="flex-1 flex gap-2">
@@ -88,9 +98,9 @@ export const ChatWidget = ({ isOpen, setIsOpen }: ChatWidgetProps) => {
                 onChange={(e) => setInput(e.target.value)}
                 onKeyPress={(e) => e.key === 'Enter' && handleSend()}
                 placeholder="Ask me anything about Quentin's career, projects, and patents..."
-                className="flex-1"
+                className="flex-1 bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50"
               />
-              <Button onClick={handleSend} size="default">
+              <Button onClick={handleSend} size="default" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90">
                 <Send className="h-4 w-4" />
               </Button>
           </div>
