@@ -17,20 +17,20 @@ export const workProjects: Project[] = [
     date: '2024'
   },
   {
+    id: 'ffs-portal',
+    title: 'Frustration-Free Setup Developer Portal',
+    description: 'Lead product manager for the FFS developer portal experience.',
+    images: ['/placeholder.svg'],
+    link: '',
+    date: '2023'
+  },
+  {
     id: 'air-quality',
     title: 'Amazon Air Quality Monitor',
     description: 'Led team that upleveled the Amazon Air Quality Monitor.',
     images: ['/placeholder.svg'],
     link: '',
     date: '2022'
-  },
-  {
-    id: 'cas',
-    title: 'Verizon Critical Asset Sensor',
-    description: 'Lead product manager for Verizon\'s first 1P B2B product, the Critical Asset Sensor. The solution includes a multi-sensor device, access to data stream APIs, and Verizon 4G LTE-M M2M connectivity, all bundled together. Deploy multi-sensor devices in the field without having to worry about devices, connectivity, protocols, or security.',
-    images: ['/placeholder.svg'],
-    link: '',
-    date: '2020'
   },
   {
     id: 'ffs-matter',
@@ -47,6 +47,14 @@ export const workProjects: Project[] = [
     images: ['/placeholder.svg'],
     link: '',
     date: '2021'
+  },
+  {
+    id: 'cas',
+    title: 'Verizon Critical Asset Sensor',
+    description: 'Lead product manager for Verizon\'s first 1P B2B product, the Critical Asset Sensor. The solution includes a multi-sensor device, access to data stream APIs, and Verizon 4G LTE-M M2M connectivity, all bundled together. Deploy multi-sensor devices in the field without having to worry about devices, connectivity, protocols, or security.',
+    images: ['/placeholder.svg'],
+    link: '',
+    date: '2020'
   },
   {
     id: 'gizmo-pal',
@@ -71,34 +79,10 @@ export const workProjects: Project[] = [
     images: ['/placeholder.svg'],
     link: '',
     date: '2017'
-  },
-  {
-    id: 'ffs-portal',
-    title: 'Frustration-Free Setup Developer Portal',
-    description: 'Lead product manager for the FFS developer portal experience.',
-    images: ['/placeholder.svg'],
-    link: '',
-    date: '2023'
   }
 ];
 
 export const sideProjects: Project[] = [
-  {
-    id: 'shopbuy',
-    title: 'ShopBuy - Universal Cart for Multiple Retailers',
-    description: 'ShopBuy aggregated products from multiple retailers into a single feed with a universal cart. Built a platform that mapped disparate product fields to a common format. The product strategy borrowed from social media—an Instagram-style feed that felt familiar but showed retail products. Added gamification to drive repeat visits and engagement.',
-    images: ['/placeholder.svg'],
-    link: '',
-    date: '2018'
-  },
-  {
-    id: 'frotorial',
-    title: 'FROtorial - Social Network for Textured Hair',
-    description: 'FROtorial addressed a gap in the multi-billion dollar ethnic hair care market—no major social platforms served the kinky and curly hair community. We built a social network where users could document their hair journey, search product reviews filtered by hair type, discover routines, and buy products directly. The core insight was simple: people with textured hair had questions and conversations they wouldn\'t post on Facebook or Instagram. They needed a dedicated space.',
-    images: ['/placeholder.svg'],
-    link: '',
-    date: '2021'
-  },
   {
     id: 'vinyl-stream',
     title: 'Vinyl Stream - Physical Triggers for Digital Streaming',
@@ -114,6 +98,22 @@ export const sideProjects: Project[] = [
     images: ['/placeholder.svg'],
     link: '',
     date: '2025'
+  },
+  {
+    id: 'frotorial',
+    title: 'FROtorial - Social Network for Textured Hair',
+    description: 'FROtorial addressed a gap in the multi-billion dollar ethnic hair care market—no major social platforms served the kinky and curly hair community. We built a social network where users could document their hair journey, search product reviews filtered by hair type, discover routines, and buy products directly. The core insight was simple: people with textured hair had questions and conversations they wouldn\'t post on Facebook or Instagram. They needed a dedicated space.',
+    images: ['/placeholder.svg'],
+    link: '',
+    date: '2021'
+  },
+  {
+    id: 'shopbuy',
+    title: 'ShopBuy - Universal Cart for Multiple Retailers',
+    description: 'ShopBuy aggregated products from multiple retailers into a single feed with a universal cart. Built a platform that mapped disparate product fields to a common format. The product strategy borrowed from social media—an Instagram-style feed that felt familiar but showed retail products. Added gamification to drive repeat visits and engagement.',
+    images: ['/placeholder.svg'],
+    link: '',
+    date: '2018'
   }
 ];
 

@@ -38,7 +38,7 @@ export const ChatWidget = () => {
   };
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 border-t border-border bg-card">
+    <div className="fixed bottom-0 left-0 right-0 z-50 border-t-2 border-accent bg-gradient-to-r from-primary via-primary/95 to-primary shadow-2xl">
       {/* Chat Messages Window */}
       {isOpen && (
         <div className="max-w-7xl mx-auto h-[400px] flex flex-col animate-in slide-in-from-bottom-4 duration-300">
@@ -53,8 +53,8 @@ export const ChatWidget = () => {
                   <div
                     className={`max-w-[80%] rounded-lg px-4 py-2 ${
                       message.role === 'user'
-                        ? 'bg-primary text-primary-foreground'
-                        : 'bg-muted text-foreground'
+                        ? 'bg-accent text-accent-foreground'
+                        : 'bg-card text-foreground border border-border'
                     }`}
                   >
                     <p className="text-sm">{message.content}</p>
@@ -67,28 +67,33 @@ export const ChatWidget = () => {
       )}
 
       {/* Chat Bar */}
-      <div className="max-w-7xl mx-auto px-6 py-4">
+      <div className="max-w-7xl mx-auto px-6 py-6">
         <div className="flex items-center gap-4">
           <Button
             variant="ghost"
-            size="sm"
+            size="lg"
             onClick={() => setIsOpen(!isOpen)}
-            className="shrink-0"
+            className="shrink-0 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground"
           >
-            {isOpen ? <X className="h-5 w-5" /> : <MessageCircle className="h-5 w-5" />}
+            {isOpen ? <X className="h-6 w-6" /> : <MessageCircle className="h-6 w-6" />}
           </Button>
           
-          <div className="flex-1 flex gap-2">
-            <Input
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              onKeyPress={(e) => e.key === 'Enter' && handleSend()}
-              placeholder="Chat with Quentin's Agent..."
-              className="flex-1"
-            />
-            <Button onClick={handleSend} size="icon" className="bg-accent hover:bg-accent/90">
-              <Send className="h-4 w-4" />
-            </Button>
+          <div className="flex-1 flex flex-col gap-2">
+            <h3 className="text-lg font-bold text-primary-foreground">
+              Chat with Quentin's Agent
+            </h3>
+            <div className="flex gap-2">
+              <Input
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+                onKeyPress={(e) => e.key === 'Enter' && handleSend()}
+                placeholder="Ask me anything about Quentin's career, projects, and patents..."
+                className="flex-1 bg-card border-accent text-lg py-6"
+              />
+              <Button onClick={handleSend} size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground px-8">
+                <Send className="h-5 w-5" />
+              </Button>
+            </div>
           </div>
         </div>
       </div>
