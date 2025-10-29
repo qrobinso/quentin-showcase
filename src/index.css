@@ -55,6 +55,77 @@ All colors MUST be HSL.
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
+  .markdown-content {
+    @apply leading-relaxed;
+  }
+
+  .markdown-content h1,
+  .markdown-content h2,
+  .markdown-content h3 {
+    @apply font-semibold mt-4 mb-2;
+  }
+
+  .markdown-content h1 {
+    @apply text-base;
+  }
+
+  .markdown-content h2 {
+    @apply text-sm;
+  }
+
+  .markdown-content h3 {
+    @apply text-sm;
+  }
+
+  .markdown-content p {
+    @apply mb-2;
+  }
+
+  .markdown-content ul,
+  .markdown-content ol {
+    @apply ml-4 mb-2 space-y-1;
+  }
+
+  .markdown-content ul {
+    @apply list-disc;
+  }
+
+  .markdown-content ol {
+    @apply list-decimal;
+  }
+
+  .markdown-content li {
+    @apply ml-2;
+  }
+
+  .markdown-content strong {
+    @apply font-semibold;
+  }
+
+  .markdown-content em {
+    @apply italic;
+  }
+
+  .markdown-content code {
+    @apply bg-primary-foreground/20 px-1 py-0.5 rounded text-xs;
+  }
+
+  .markdown-content pre {
+    @apply bg-primary-foreground/20 p-2 rounded my-2 overflow-x-auto;
+  }
+
+  .markdown-content pre code {
+    @apply bg-transparent p-0;
+  }
+
+  .markdown-content a {
+    @apply underline hover:opacity-80 transition-opacity;
+  }
+
+  .markdown-content blockquote {
+    @apply border-l-2 border-primary-foreground/40 pl-3 italic my-2;
+  }
+
   .dark {
     --background: 100 48% 17%;
     --foreground: 40 20% 97%;
