@@ -23,7 +23,7 @@ export const workProjects: Project[] = [
     id: 'ffs-portal',
     title: 'Frustration-Free Setup Developer Portal',
     description: 'Lead product manager for the FFS developer portal experience.',
-    images: ['/placeholder.svg'],
+    images: [new URL('../assets/ffs-portal-1.png', import.meta.url).href],
     link: '',
     date: '2023'
   },
