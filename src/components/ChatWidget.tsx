@@ -23,7 +23,7 @@ export const ChatWidget = ({
 }: ChatWidgetProps) => {
   const [messages, setMessages] = useState<Message[]>([{
     role: 'assistant',
-    content: "Hey there! I'm Quentin AI agent. I can help answer questions about his career, projects or help you get in contact with him. What would you like to do?"
+    content: "Hey there! I'm Quentin's AI agent. I can help answer questions about his career, projects or help you get in contact with him. What would you like to do?"
   }]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
