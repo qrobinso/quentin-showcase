@@ -10,10 +10,14 @@ export const Header = ({
   
   useEffect(() => {
     const handleScroll = () => {
-      // Hero section is typically viewport height, fade in after scrolling past it
       const scrollPosition = window.scrollY;
       const viewportHeight = window.innerHeight;
       setIsScrolled(scrollPosition > viewportHeight * 0.7);
+      
+      // Clear active section when in hero area
+      if (scrollPosition < viewportHeight * 0.5) {
+        setActiveSection("");
+      }
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
