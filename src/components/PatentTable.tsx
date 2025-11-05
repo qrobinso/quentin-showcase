@@ -103,7 +103,7 @@ export const PatentTable = ({ title, description, patents, id }: PatentTableProp
                   <TableCell className="text-muted-foreground hidden lg:table-cell w-1/4">
                     {patent.userApplication}
                   </TableCell>
-                  <TableCell className="text-muted-foreground text-right whitespace-nowrap">
+                  <TableCell className="text-muted-foreground text-right whitespace-nowrap w-auto">
                     {patent.date}
                   </TableCell>
                 </TableRow>
