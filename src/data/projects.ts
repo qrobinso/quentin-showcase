@@ -2,6 +2,9 @@ export interface Project {
   id: string;
   title: string;
   description: string;
+  problem?: string;
+  solution?: string;
+  result?: string;
   images: string[];
   link?: string;
   date: string;
@@ -14,6 +17,9 @@ export const workProjects: Project[] = [
     id: 'ffa',
     title: 'Frustration-Free Automation',
     description: 'Led new 0-to-1 GenAI initiative, Frustration-Free Automation. During setup of an Alexa-enabled smart home device, Frustration-Free Automation automatically creates Routines for compatible, connected devices to work together. Shipped across 1P and 3P partners, such as Amazon Basics, WiZ, and Phillips Hue.',
+    problem: 'Customers struggled to realize the full value of their smart home devices, often purchasing products without understanding how to make them work together.',
+    solution: 'Built a GenAI system that automatically creates intelligent Routines during device setup, suggesting contextually relevant automations based on compatible devices already in the home.',
+    result: 'Shipped across 1P and 3P partners including Amazon Basics, WiZ, and Phillips Hue, significantly improving customer smart home onboarding experience.',
     images: [
       new URL('../assets/ffa-1.jpg', import.meta.url).href,
       new URL('../assets/ffa-2.jpg', import.meta.url).href
@@ -27,6 +33,9 @@ export const workProjects: Project[] = [
     id: 'ffs-portal',
     title: 'Frustration-Free Setup Developer Portal',
     description: 'Lead product manager for the FFS developer portal experience.',
+    problem: 'Device manufacturers needed streamlined access to Amazon\'s Frustration-Free Setup (FFS) integration tools and documentation.',
+    solution: 'Created a comprehensive developer portal providing clear integration guides, API documentation, and self-service tools for device certification.',
+    result: 'Enabled hundreds of device manufacturers to integrate FFS capabilities into their products, accelerating time-to-market for smart home devices.',
     images: [new URL('../assets/ffs-portal-1.png', import.meta.url).href],
     link: 'https://developer.amazon.com/frustration-free-setup',
     date: '2023',
@@ -37,6 +46,9 @@ export const workProjects: Project[] = [
     id: 'air-quality',
     title: 'Amazon Air Quality Monitor',
     description: 'Led team that upleveled the Amazon Air Quality Monitor.',
+    problem: 'Customers lacked visibility into their indoor air quality, which could impact health but was invisible without specialized equipment.',
+    solution: 'Led product development of an affordable, easy-to-use air quality monitor that tracks five key metrics and integrates with Alexa for voice-controlled monitoring.',
+    result: 'Launched a successful consumer device that makes indoor air quality monitoring accessible to mainstream customers.',
     images: [new URL('../assets/air-quality-1.jpg', import.meta.url).href],
     link: 'https://a.co/d/iN3uhzq',
     date: '2022',
@@ -110,6 +122,9 @@ export const sideProjects: Project[] = [
     id: 'vinyl-stream',
     title: 'Vinyl Stream - Physical Triggers for Digital Streaming',
     description: 'Vinyl Stream uses NFC technology to bridge physical vinyl records and streaming services. Users place NFC-enabled records on a base unit that instantly plays the album through connected smart speakers while syncing smart lighting to match album artwork. The system integrates with Spotify, Apple Music, and TIDAL, supporting multi-room audio across smart speaker ecosystems.',
+    problem: 'Music lovers wanted the tactile, intentional experience of vinyl without sacrificing the convenience and multi-room capabilities of streaming services.',
+    solution: 'Built an NFC-based system that lets users place physical records on a base unit to trigger instant playback across smart speakers, with synchronized smart lighting based on album artwork.',
+    result: 'Created a unique product that bridges analog nostalgia with digital convenience, supporting Spotify, Apple Music, TIDAL, and major smart speaker ecosystems.',
     images: ['/placeholder.svg'],
     link: '',
     date: '2025'
@@ -118,6 +133,9 @@ export const sideProjects: Project[] = [
     id: 'photo-frame',
     title: 'Photo Frame Assistant - Self-Hosted Digital Photo Frame Manager',
     description: 'Photo Frame Assistant is a self-hosted platform that manages multiple digital photo frames across a home network. Built as a privacy-first alternative to cloud services, it keeps all photos local while controlling e-ink displays, smart TVs, and DIY frames from a unified dashboard. The system handles scheduling, sync groups for coordinated displays, and power optimization for battery-operated frames. Technical stack runs on Python with Docker containers, MQTT communication, and Raspberry Pi compatibility.',
+    problem: 'Existing digital photo frame solutions required uploading private photos to cloud services, lacked multi-device management, and didn\'t support heterogeneous display types.',
+    solution: 'Built a self-hosted platform using Python, Docker, and MQTT that manages e-ink displays, smart TVs, and DIY frames from one dashboard while keeping all photos local on the home network.',
+    result: 'Delivered a privacy-first alternative with features including scheduling, sync groups for coordinated displays, and power optimization for battery-operated frames.',
     images: [
       new URL('../assets/photo-frame-1.jpg', import.meta.url).href,
       new URL('../assets/photo-frame-2.jpg', import.meta.url).href,
@@ -132,6 +150,9 @@ export const sideProjects: Project[] = [
     id: 'frotorial',
     title: 'FROtorial - Social Network for Textured Hair',
     description: 'FROtorial addressed a gap in the multi-billion dollar ethnic hair care market—no major social platforms served the kinky and curly hair community. We built a social network where users could document their hair journey, search product reviews filtered by hair type, discover routines, and buy products directly. The core insight was simple: people with textured hair had questions and conversations they wouldn\'t post on Facebook or Instagram. They needed a dedicated space.',
+    problem: 'The multi-billion dollar ethnic hair care market had no dedicated social platform where people with kinky and curly hair could share routines, product reviews, and advice.',
+    solution: 'Created a specialized social network enabling users to document hair journeys, search reviews filtered by hair type, discover routines, and purchase products directly within the platform.',
+    result: 'Built a community space that addressed conversations users wouldn\'t have on mainstream platforms like Facebook or Instagram, creating value in an underserved market.',
     images: [
       new URL('../assets/frotorial-1.avif', import.meta.url).href,
       new URL('../assets/frotorial-2.avif', import.meta.url).href,
@@ -145,6 +166,9 @@ export const sideProjects: Project[] = [
     id: 'shopbuy',
     title: 'ShopBuy - Universal Cart for Multiple Retailers',
     description: 'ShopBuy aggregated products from multiple retailers into a single feed with a universal cart. Built a platform that mapped disparate product fields to a common format. The product strategy borrowed from social media—an Instagram-style feed that felt familiar but showed retail products. Added gamification to drive repeat visits and engagement.',
+    problem: 'Online shoppers had to manage multiple carts across different retailers, creating friction in the purchasing process and limiting product discovery.',
+    solution: 'Built a product aggregation platform with a universal cart, Instagram-style feed for familiar UX, and gamification elements to drive engagement across multiple retailers.',
+    result: 'Created a unified shopping experience that mapped disparate product data to a common format, enabling cross-retailer browsing and checkout.',
     images: [
       new URL('../assets/shopbuy-1.avif', import.meta.url).href,
       new URL('../assets/shopbuy-2.avif', import.meta.url).href,

@@ -239,7 +239,7 @@ export const ProjectGallery = ({ title, description, projects, id }: ProjectGall
               </CardHeader>
               
               <CardContent>
-                <div className="space-y-3">
+                <div className="space-y-4">
                   {project.sector && project.type && (
                     <div className="flex gap-2 flex-wrap">
                       <Badge variant="outline" className="text-xs">
@@ -250,9 +250,27 @@ export const ProjectGallery = ({ title, description, projects, id }: ProjectGall
                       </Badge>
                     </div>
                   )}
-                  <CardDescription className="text-base leading-relaxed">
-                    {project.description}
-                  </CardDescription>
+                  
+                  {project.problem && project.solution && project.result ? (
+                    <div className="space-y-3">
+                      <div>
+                        <h4 className="text-sm font-semibold text-foreground mb-1">Problem</h4>
+                        <p className="text-sm text-muted-foreground leading-relaxed">{project.problem}</p>
+                      </div>
+                      <div>
+                        <h4 className="text-sm font-semibold text-foreground mb-1">Solution</h4>
+                        <p className="text-sm text-muted-foreground leading-relaxed">{project.solution}</p>
+                      </div>
+                      <div>
+                        <h4 className="text-sm font-semibold text-foreground mb-1">Result</h4>
+                        <p className="text-sm text-muted-foreground leading-relaxed">{project.result}</p>
+                      </div>
+                    </div>
+                  ) : (
+                    <CardDescription className="text-base leading-relaxed">
+                      {project.description}
+                    </CardDescription>
+                  )}
                 </div>
               </CardContent>
             </Card>
