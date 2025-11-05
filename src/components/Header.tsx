@@ -6,73 +6,28 @@ export const Header = ({
   onChatClick
 }: HeaderProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState<string>("");
-  
   useEffect(() => {
     const handleScroll = () => {
+      // Hero section is typically viewport height, fade in after scrolling past it
       const scrollPosition = window.scrollY;
       const viewportHeight = window.innerHeight;
       setIsScrolled(scrollPosition > viewportHeight * 0.7);
-      
-      // Clear active section when in hero area
-      if (scrollPosition < viewportHeight * 0.5) {
-        setActiveSection("");
-      }
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  useEffect(() => {
-    const sections = document.querySelectorAll('section[id]');
-    
-    const observerOptions = {
-      root: null,
-      rootMargin: '-20% 0px -60% 0px',
-      threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting && entry.intersectionRatio > 0.1) {
-          setActiveSection(entry.target.id);
-        }
-      });
-    }, observerOptions);
-
-    sections.forEach((section) => observer.observe(section));
-
-    return () => {
-      sections.forEach((section) => observer.unobserve(section));
-    };
   }, []);
   return <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border" role="banner">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-center md:justify-between">
         <h2 className={`hidden md:block text-lg md:text-xl font-serif font-bold text-foreground tracking-wider transition-opacity duration-300 ${isScrolled ? 'opacity-100' : 'opacity-0'}`}>Hi, I'm Quentin Robinson.</h2>
         
         <nav className="flex gap-6 justify-center" role="navigation" aria-label="Main navigation">
-          <a 
-            href="#work" 
-            className={`text-sm md:text-base transition-colors ${
-              activeSection === 'work' ? 'text-primary font-semibold' : 'text-muted-foreground hover:text-primary'
-            }`}
-          >
+          <a href="#work" className="text-sm md:text-base text-muted-foreground hover:text-primary transition-colors">
             Work
           </a>
-          <a 
-            href="#side" 
-            className={`text-sm md:text-base transition-colors ${
-              activeSection === 'side' ? 'text-primary font-semibold' : 'text-muted-foreground hover:text-primary'
-            }`}
-          >
+          <a href="#side" className="text-sm md:text-base text-muted-foreground hover:text-primary transition-colors">
             Fun
           </a>
-          <a 
-            href="#patents" 
-            className={`text-sm md:text-base transition-colors ${
-              activeSection === 'patents' ? 'text-primary font-semibold' : 'text-muted-foreground hover:text-primary'
-            }`}
-          >
+          <a href="#patents" className="text-sm md:text-base text-muted-foreground hover:text-primary transition-colors">
             Patents
           </a>
           <button onClick={onChatClick} className="text-sm md:text-base text-muted-foreground hover:text-primary transition-colors" aria-label="Open chat">Agent</button>
