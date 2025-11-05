@@ -28,13 +28,13 @@ export const Header = ({
     
     const observerOptions = {
       root: null,
-      rootMargin: '-50% 0px -50% 0px',
-      threshold: 0
+      rootMargin: '-20% 0px -60% 0px',
+      threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]
     };
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && entry.intersectionRatio > 0.1) {
           setActiveSection(entry.target.id);
         }
       });
