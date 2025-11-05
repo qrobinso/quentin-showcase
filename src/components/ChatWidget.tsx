@@ -155,6 +155,17 @@ export const ChatWidget = ({
   return <div className="fixed bottom-0 left-0 right-0 z-50 border-t border-primary/20 animated-gradient-bg text-primary-foreground">
       {/* Chat Messages Window */}
       {isOpen && <div className="max-w-7xl mx-auto h-[400px] flex flex-col animate-in slide-in-from-bottom-4 duration-300 backdrop-blur-sm bg-primary/30">
+          {/* Mobile Close Button */}
+          <div className="md:hidden flex justify-end p-2 border-b border-primary-foreground/20">
+            <Button 
+              variant="ghost" 
+              size="icon" 
+              onClick={() => setIsOpen(false)}
+              className="text-primary-foreground hover:bg-primary-foreground/10"
+            >
+              <X className="h-5 w-5" />
+            </Button>
+          </div>
           {/* Messages */}
           <ScrollArea className="flex-1 p-4">
             <div className="space-y-4">
