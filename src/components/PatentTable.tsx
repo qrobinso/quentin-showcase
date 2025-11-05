@@ -88,22 +88,22 @@ export const PatentTable = ({ title, description, patents, id }: PatentTableProp
                 <TableHead className="font-semibold text-foreground">Title</TableHead>
                 <TableHead className="font-semibold text-foreground hidden md:table-cell">Description</TableHead>
                 <TableHead className="font-semibold text-foreground hidden lg:table-cell">User Application</TableHead>
-                <TableHead className="font-semibold text-foreground text-right">Date</TableHead>
+                <TableHead className="font-semibold text-foreground text-right w-24">Date</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
               {filteredPatents.map((patent) => (
                 <TableRow key={patent.id} className="hover:bg-muted/30 transition-colors">
-                  <TableCell className="font-medium text-foreground w-1/5">
+                  <TableCell className="font-medium text-foreground">
                     {patent.title}
                   </TableCell>
-                  <TableCell className="text-muted-foreground hidden md:table-cell w-2/5">
+                  <TableCell className="text-muted-foreground hidden md:table-cell">
                     {patent.description}
                   </TableCell>
-                  <TableCell className="text-muted-foreground hidden lg:table-cell w-1/4">
+                  <TableCell className="text-muted-foreground hidden lg:table-cell">
                     {patent.userApplication}
                   </TableCell>
-                  <TableCell className="text-muted-foreground text-right whitespace-nowrap w-auto">
+                  <TableCell className="text-muted-foreground text-right whitespace-nowrap w-24">
                     {patent.date}
                   </TableCell>
                 </TableRow>
