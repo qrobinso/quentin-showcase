@@ -11,6 +11,7 @@ export interface Project {
   date: string;
   sector?: 'Consumer' | 'B2B';
   type?: 'Device' | 'Service';
+  domain?: 'IoT' | 'Wearables' | 'Device Setup' | 'Network Management';
 }
 
 export const workProjects: Project[] = [
@@ -208,7 +209,8 @@ export const patents: Project[] = [
     userApplication: 'Scan a QR code before delivery, device auto-connects to WiFi and account on unboxing.',
     images: ['/placeholder.svg'],
     link: '',
-    date: 'Oct 2024'
+    date: 'Oct 2024',
+    domain: 'Device Setup'
   },
   {
     id: 'patent-11871471',
@@ -217,7 +219,8 @@ export const patents: Project[] = [
     userApplication: 'Echo automatically reconnects smart devices when WiFi password changes.',
     images: ['/placeholder.svg'],
     link: '',
-    date: 'Jan 2024'
+    date: 'Jan 2024',
+    domain: 'Network Management'
   },
   {
     id: 'patent-11671829',
@@ -226,7 +229,8 @@ export const patents: Project[] = [
     userApplication: 'New smart devices auto-add to Alexa without manufacturer apps or separate accounts.',
     images: ['/placeholder.svg'],
     link: '',
-    date: 'Jun 2023'
+    date: 'Jun 2023',
+    domain: 'Device Setup'
   },
   {
     id: 'patent-11606690',
@@ -235,7 +239,8 @@ export const patents: Project[] = [
     userApplication: 'Devices intelligently connect to home network without pairing modes.',
     images: ['/placeholder.svg'],
     link: '',
-    date: 'Mar 2023'
+    date: 'Mar 2023',
+    domain: 'Device Setup'
   },
   {
     id: 'patent-11575759',
@@ -244,7 +249,8 @@ export const patents: Project[] = [
     userApplication: 'Simple phone notification confirms adding new devices securely.',
     images: ['/placeholder.svg'],
     link: '',
-    date: 'Feb 2023'
+    date: 'Feb 2023',
+    domain: 'Device Setup'
   },
   {
     id: 'patent-11368994',
@@ -253,7 +259,8 @@ export const patents: Project[] = [
     userApplication: 'Devices auto-reconnect after power outages via Echo hub.',
     images: ['/placeholder.svg'],
     link: '',
-    date: 'Jun 2022'
+    date: 'Jun 2022',
+    domain: 'Network Management'
   },
   {
     id: 'patent-wearable-ui',
@@ -262,7 +269,8 @@ export const patents: Project[] = [
     userApplication: 'Customize smartwatch layout from phone, changes sync instantly.',
     images: ['/placeholder.svg'],
     link: '',
-    date: 'Nov 2019'
+    date: 'Nov 2019',
+    domain: 'Wearables'
   },
   {
     id: 'patent-homescreen',
@@ -271,7 +279,8 @@ export const patents: Project[] = [
     userApplication: 'Watch shows fitness apps at gym, work apps at office automatically.',
     images: ['/placeholder.svg'],
     link: '',
-    date: 'Oct 2019'
+    date: 'Oct 2019',
+    domain: 'Wearables'
   },
   {
     id: 'patent-connection-mgmt',
@@ -280,7 +289,8 @@ export const patents: Project[] = [
     userApplication: 'Battery-powered sensors last months via smart cellular data management.',
     images: ['/placeholder.svg'],
     link: '',
-    date: 'Oct 2019'
+    date: 'Oct 2019',
+    domain: 'IoT'
   },
   {
     id: 'patent-4g-antenna',
@@ -289,7 +299,8 @@ export const patents: Project[] = [
     userApplication: 'Strong cellular calls on watch with radiation kept safely from skin.',
     images: ['/placeholder.svg'],
     link: '',
-    date: 'Oct 2019'
+    date: 'Oct 2019',
+    domain: 'Wearables'
   },
   {
     id: 'patent-touch-ui',
@@ -298,7 +309,8 @@ export const patents: Project[] = [
     userApplication: 'Swap watch screens between fitness band and larger display.',
     images: ['/placeholder.svg'],
     link: '',
-    date: 'Jul 2019'
+    date: 'Jul 2019',
+    domain: 'Wearables'
   },
   {
     id: 'patent-wireless',
@@ -307,7 +319,8 @@ export const patents: Project[] = [
     userApplication: 'Watch auto-switches WiFi, Bluetooth, cellular for optimal battery life.',
     images: ['/placeholder.svg'],
     link: '',
-    date: 'Aug 2018'
+    date: 'Aug 2018',
+    domain: 'Wearables'
   },
   {
     id: 'patent-sensors',
@@ -316,7 +329,8 @@ export const patents: Project[] = [
     userApplication: 'Upgrade individual sensors without replacing entire wearable device.',
     images: ['/placeholder.svg'],
     link: '',
-    date: 'Apr 2018'
+    date: 'Apr 2018',
+    domain: 'Wearables'
   },
   {
     id: 'patent-activation',
@@ -325,7 +339,8 @@ export const patents: Project[] = [
     userApplication: 'Activate kids\' watch cellular service from your phone remotely.',
     images: ['/placeholder.svg'],
     link: '',
-    date: 'Dec 2017'
+    date: 'Dec 2017',
+    domain: 'Wearables'
   },
   {
     id: 'patent-multicast',
@@ -334,6 +349,7 @@ export const patents: Project[] = [
     userApplication: 'Multiple smart devices register to network simultaneously, not one-by-one.',
     images: ['/placeholder.svg'],
     link: '',
-    date: 'May 2019'
+    date: 'May 2019',
+    domain: 'IoT'
   }
 ];
