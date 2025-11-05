@@ -34,13 +34,13 @@ export const PatentTable = ({ title, description, patents, id }: PatentTableProp
             <TableBody>
               {patents.map((patent) => (
                 <TableRow key={patent.id} className="hover:bg-muted/30 transition-colors">
-                  <TableCell className="font-medium text-foreground max-w-xs">
+                  <TableCell className="font-medium text-foreground w-1/5">
                     {patent.title}
                   </TableCell>
-                  <TableCell className="text-muted-foreground hidden md:table-cell">
+                  <TableCell className="text-muted-foreground hidden md:table-cell w-2/5">
                     {patent.description}
                   </TableCell>
-                  <TableCell className="text-muted-foreground hidden lg:table-cell max-w-md">
+                  <TableCell className="text-muted-foreground hidden lg:table-cell w-1/4">
                     {patent.userApplication}
                   </TableCell>
                   <TableCell className="text-muted-foreground text-right whitespace-nowrap">
