@@ -18,9 +18,7 @@ export const Header = ({
           <a href="#patents" className="text-sm md:text-base text-muted-foreground hover:text-primary transition-colors">
             Patents
           </a>
-          <button onClick={onChatClick} className="text-sm md:text-base text-muted-foreground hover:text-primary transition-colors" aria-label="Open chat">
-            Chat
-          </button>
+          <button onClick={onChatClick} className="text-sm md:text-base text-muted-foreground hover:text-primary transition-colors" aria-label="Open chat">Agent</button>
         </nav>
       </div>
     </header>;
