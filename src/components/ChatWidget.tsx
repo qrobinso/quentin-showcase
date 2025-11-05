@@ -183,7 +183,7 @@ export const ChatWidget = ({
       {/* Chat Bar */}
       <div className="max-w-7xl mx-auto px-6 py-3">
         <div className="flex items-center gap-4">
-          <Button variant="ghost" size="default" onClick={() => setIsOpen(!isOpen)} className="shrink-0 group relative">
+          <Button variant="ghost" size="default" onClick={() => setIsOpen(!isOpen)} className="shrink-0 group relative hidden md:flex">
             {isOpen ? <X className="h-5 w-5" /> : <div className="flex items-center gap-2">
                 <div className="relative">
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full blur-sm opacity-75 group-hover:opacity-100 transition-opacity"></div>
