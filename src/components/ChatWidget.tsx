@@ -193,26 +193,24 @@ export const ChatWidget = ({
               </div>}
           </Button>
           
-          {(!isMobile || isOpen) && (
-            <div className="flex-1 flex gap-2">
-                <Input 
-                  value={input} 
-                  onChange={e => setInput(e.target.value)} 
-                  onKeyPress={e => e.key === 'Enter' && !isLoading && handleSend()} 
-                  placeholder={placeholderText || "Ask me anything..."} 
-                  className="flex-1 bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/80"
-                  disabled={isLoading}
-                />
-                <Button 
-                  onClick={handleSend} 
-                  size="default" 
-                  className="bg-primary-foreground text-primary hover:bg-primary-foreground/90"
-                  disabled={isLoading}
-                >
-                  <Send className="h-4 w-4" />
-                </Button>
-            </div>
-          )}
+          <div className="flex-1 flex gap-2">
+              <Input 
+                value={input} 
+                onChange={e => setInput(e.target.value)} 
+                onKeyPress={e => e.key === 'Enter' && !isLoading && handleSend()} 
+                placeholder={placeholderText || "Ask me anything..."} 
+                className="flex-1 bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/80"
+                disabled={isLoading}
+              />
+              <Button 
+                onClick={handleSend} 
+                size="default" 
+                className="bg-primary-foreground text-primary hover:bg-primary-foreground/90"
+                disabled={isLoading}
+              >
+                <Send className="h-4 w-4" />
+              </Button>
+          </div>
         </div>
       </div>
     </div>;
