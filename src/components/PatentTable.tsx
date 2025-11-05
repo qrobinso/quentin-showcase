@@ -27,6 +27,7 @@ export const PatentTable = ({ title, description, patents, id }: PatentTableProp
               <TableRow className="bg-muted/50">
                 <TableHead className="font-semibold text-foreground">Title</TableHead>
                 <TableHead className="font-semibold text-foreground hidden md:table-cell">Description</TableHead>
+                <TableHead className="font-semibold text-foreground hidden lg:table-cell">User Application</TableHead>
                 <TableHead className="font-semibold text-foreground text-right">Date</TableHead>
               </TableRow>
             </TableHeader>
@@ -38,6 +39,9 @@ export const PatentTable = ({ title, description, patents, id }: PatentTableProp
                   </TableCell>
                   <TableCell className="text-muted-foreground hidden md:table-cell">
                     {patent.description}
+                  </TableCell>
+                  <TableCell className="text-muted-foreground hidden lg:table-cell max-w-md">
+                    {patent.userApplication}
                   </TableCell>
                   <TableCell className="text-muted-foreground text-right whitespace-nowrap">
                     {patent.date}

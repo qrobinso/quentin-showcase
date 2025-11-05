@@ -5,6 +5,7 @@ export interface Project {
   problem?: string;
   solution?: string;
   result?: string;
+  userApplication?: string;
   images: string[];
   link?: string;
   date: string;
@@ -204,6 +205,7 @@ export const patents: Project[] = [
     id: 'patent-12132611',
     title: 'Systems and Methods for Automatically Configuring Computer Devices',
     description: 'Techniques for enabling customers to setup devices before delivery. Customers can provide pre-onboarding information via QR codes containing network and registration data for automatic device configuration. Patent 12132611',
+    userApplication: 'Scan a QR code before your smart home device arrives, and when you unbox it, the device automatically connects to your WiFi and Amazon account without any setup steps.',
     images: ['/placeholder.svg'],
     link: '',
     date: 'Oct 2024'
@@ -212,6 +214,7 @@ export const patents: Project[] = [
     id: 'patent-11871471',
     title: 'Process for Managing Reconnections of Devices in a Network',
     description: 'Approach for reconnecting IoT devices after network connection loss. Devices transmit beacons to authorized devices which relay to remote systems for password retrieval and reconnection. Patent 11871471',
+    userApplication: 'When your WiFi password changes, your Echo device automatically helps reconnect your smart lights and other IoT devices without manually reconfiguring each one.',
     images: ['/placeholder.svg'],
     link: '',
     date: 'Jan 2024'
@@ -220,6 +223,7 @@ export const patents: Project[] = [
     id: 'patent-11671829',
     title: 'Server-Based Association of a User Device with a User Account',
     description: 'Efficient registration of third party devices with user accounts through Frustration Free Setup (FFS) service. Validates beacons and initiates user authentication for proper device association. Patent 11,671,829',
+    userApplication: 'Plug in a new smart plug from any brand, and Alexa automatically detects it and adds it to your account without needing to download manufacturer apps or create separate accounts.',
     images: ['/placeholder.svg'],
     link: '',
     date: 'Jun 2023'
@@ -228,6 +232,7 @@ export const patents: Project[] = [
     id: 'patent-11606690',
     title: 'Confidence Based Network Provisioning of Devices',
     description: 'Techniques for establishing data connections using confidence scores. Determines likelihood of user authorization based on multiple data sources to connect devices to networks. Patent 11,606,690',
+    userApplication: 'Your smart doorbell intelligently connects to your home network by verifying you own it through multiple signals, eliminating the need for complicated pairing modes.',
     images: ['/placeholder.svg'],
     link: '',
     date: 'Mar 2023'
@@ -236,6 +241,7 @@ export const patents: Project[] = [
     id: 'patent-11575759',
     title: 'Associating Device with User Account and Establishing Connection',
     description: 'Techniques for connecting computing devices to networks. Determines device associations with accounts and manages confirmation requests for secure device setup. Patent 11575759',
+    userApplication: 'Get a simple notification on your phone asking to confirm adding a new smart device to your network, making setup secure yet effortless.',
     images: ['/placeholder.svg'],
     link: '',
     date: 'Feb 2023'
@@ -244,6 +250,7 @@ export const patents: Project[] = [
     id: 'patent-11368994',
     title: 'Process for Managing Reconnections of Devices in a Network',
     description: 'IoT device reconnection after network connection loss. Echo devices transmit beacons through provisioner devices to retrieve updated passwords and reestablish network connections. Patent 11,368,994',
+    userApplication: 'After a power outage or router reset, your smart home devices automatically reconnect to WiFi through your Echo, saving you from manually resetting each device.',
     images: ['/placeholder.svg'],
     link: '',
     date: 'Jun 2022'
@@ -252,6 +259,7 @@ export const patents: Project[] = [
     id: 'patent-wearable-ui',
     title: 'Configuring a User Interface Layout via a Configuration Device',
     description: 'System for configuring smart watch user interface layouts. Provides configuration information to permit device UI updates based on user preferences. Patent 20170322711',
+    userApplication: 'Customize your smartwatch layout from your phone, instantly seeing your preferred apps and widgets appear on your watch face.',
     images: ['/placeholder.svg'],
     link: '',
     date: 'Nov 2019'
@@ -260,6 +268,7 @@ export const patents: Project[] = [
     id: 'patent-homescreen',
     title: 'Homescreen for Wearable Devices',
     description: 'Personalized use case detection for wearable devices. Presents new home-screen experiences with multiple app interfaces based on location, sensor, time, and peripheral state data. Patent US20170075551A1',
+    userApplication: 'Your smartwatch automatically shows fitness apps when you arrive at the gym and calendar/email apps when you reach the office.',
     images: ['/placeholder.svg'],
     link: '',
     date: 'Oct 2019'
@@ -268,6 +277,7 @@ export const patents: Project[] = [
     id: 'patent-connection-mgmt',
     title: 'Connection Management for Internet of Things Devices',
     description: 'Network device management for IoT devices on LTE Cat-M1 networks. Optimizes reporting configurations to reduce signal loading and power consumption. Patent 20220174596',
+    userApplication: 'Your battery-powered outdoor sensor lasts months longer by intelligently managing when it sends data over cellular networks.',
     images: ['/placeholder.svg'],
     link: '',
     date: 'Oct 2019'
@@ -276,6 +286,7 @@ export const patents: Project[] = [
     id: 'patent-4g-antenna',
     title: 'Wearable Device Design for 4G Antennas',
     description: '4G antenna implementation in wearable devices. Optimizes signal transmission while minimizing user exposure through raised antenna design and split antenna portions. Patent 20170373381',
+    userApplication: 'Make calls from your smartwatch with strong cellular signal while keeping radiation exposure safely away from your skin.',
     images: ['/placeholder.svg'],
     link: '',
     date: 'Oct 2019'
@@ -284,6 +295,7 @@ export const patents: Project[] = [
     id: 'patent-touch-ui',
     title: 'Wearable Device Having Interchangeable Touch User Interface',
     description: 'Modular wearable devices with detachable touch interfaces. Allows user interchangeability between core units and containers for flexible touch interface options. Patent 20170003720',
+    userApplication: 'Swap your smartwatch screen between a small fitness band and a larger display for different activities without changing the core device.',
     images: ['/placeholder.svg'],
     link: '',
     date: 'Jul 2019'
@@ -292,6 +304,7 @@ export const patents: Project[] = [
     id: 'patent-wireless',
     title: 'Wireless Network Interface Management on Multi-Radio Devices',
     description: 'Optimizes wireless network interface configurations on embedded computing devices based on operational modes and connection statuses. Patent 20180205608',
+    userApplication: 'Your smartwatch automatically switches between WiFi, Bluetooth, and cellular to maximize battery life while maintaining connectivity.',
     images: ['/placeholder.svg'],
     link: '',
     date: 'Aug 2018'
@@ -300,6 +313,7 @@ export const patents: Project[] = [
     id: 'patent-sensors',
     title: 'Enabling Interchangeability of Sensor Devices',
     description: 'System for replacing sensors on user devices. Detects connect events and provides sensor data for application use with interchangeable sensor devices. Patent 20170294085',
+    userApplication: 'Upgrade or replace individual sensors on your wearable device (like heart rate or GPS) without buying an entirely new device.',
     images: ['/placeholder.svg'],
     link: '',
     date: 'Apr 2018'
@@ -308,6 +322,7 @@ export const patents: Project[] = [
     id: 'patent-activation',
     title: 'Assisted Cellular Device Activation',
     description: 'SDK-based cellular service activation for wearable devices. Primary and embedded SDKs coordinate to obtain activation parameters and request cellular activation. Patent 9854426',
+    userApplication: 'Activate cellular service on your kids\' smartwatch directly from your phone without visiting a store or calling customer service.',
     images: ['/placeholder.svg'],
     link: '',
     date: 'Dec 2017'
@@ -316,6 +331,7 @@ export const patents: Project[] = [
     id: 'patent-multicast',
     title: 'Registering a Smart Device Using a Multicast Protocol',
     description: 'Point-to-multipoint messaging for smart device registration. Requests and provides security information to permit device registration with registration devices. Patent US10291603B2',
+    userApplication: 'Set up multiple smart home devices at once by having them all discover and register to your network simultaneously instead of one at a time.',
     images: ['/placeholder.svg'],
     link: '',
     date: 'May 2019'
