@@ -108,17 +108,81 @@ Link: https://www.phonescoop.com/articles/article.php?a=19172
 
 ### Side Projects
 
+**Prevue - Self-Hosted Retro Cable TV Guide (2025)**
+A self-hosted retro cable TV guide for Jellyfin and Plex that solves decision fatigue — you shouldn't have to choose what to watch every time you sit down. Turns media libraries into a cable TV channel-surfing experience.
+
+Key features:
+- AI-powered channel creation — describe a channel in plain English ("80s action movies", "Christopher Nolan marathon") and it builds itself via OpenRouter
+- Auto-generates channels by genre, era, director, actor, collection, or build custom channels manually
+- Content filters by type, rating, genre, unwatched status
+- Hardware transcoding using your media server's pipeline — quality presets from 480p to 4K, HEVC supported
+- Retro Prevue Channel-style EPG grid with built-in HLS player, overlay controls, nerd stats, and PiP
+- Iconic scene detection — AI flags famous movie moments across the guide and player as they happen live
+- "What Did I Miss" — land on a movie in progress, get a spoiler-free catch-up (triggers after 15s or press M)
+- Live ticker — scrolling marquee with primetime picks, recently added titles, library stats, and trivia
+- Just Watch mode — skip the guide, go straight to a channel picked by time of day and watch history
+- Sleep timer — 15 to 120 minutes, volume fades, screen dims, then goodnight screen with snooze
+- Multi-track audio and subtitle selection with per-language preferences
+- IPTV server — M3U playlist and XMLTV EPG output for Kodi, VLC, Jellyfin, TiviMate, etc.
+- PWA — works on iOS and Android without a native app
+- Docker deployment, fully self-hosted
+- Open source (CC BY-NC-SA 4.0)
+
+Tech: Node.js, React, Vite, HLS.js, SQLite, Docker
+GitHub: https://github.com/qrobinso/prevue
+
+**Augustus - AI Podcast Generator (2025)**
+A self-hosted audio intelligence platform that transforms personalized content into AI-generated podcasts. Designed for two use cases: (1) self-hosted home lab setups where each household member gets personalized briefings, and (2) enterprises wanting daily podcasts for employees with their own models and data sovereignty.
+
+Key features:
+- Daily briefings — AI-generated audio from news sources, blogs, and Reddit with configurable duration
+- Scheduled briefings — daily, weekly, or custom schedule patterns with email/webhook notifications
+- Topics — organize content by interest, AI-powered site suggestion, NewsAPI integration, automatic article scraping
+- Casts — customizable AI host personalities and voices, multi-voice conversations between hosts
+- Multi-profile support — separate profiles for each household member with independent briefings, topics, schedules, and casts
+- Audio player — chapter-based progress with color-coded segments, interactive chapter markers, playback speed control (0.75x-2.0x), resume from last position
+- 100+ AI models via OpenRouter for script generation
+- Three TTS providers: Piper (self-hosted, free), ElevenLabs (cloud, premium quality), Google Gemini (native TTS with expressiveness)
+- Email notifications via Resend with HTML templates and transcript previews
+- Webhooks for integration with external services
+- Full data ownership — all data stored locally, no external dependencies beyond API keys
+
+Tech: FastAPI (Python), React, SQLite, Docker
+License: Apache 2.0
+GitHub: https://github.com/qrobinso/augustus
+
 **Vinyl Stream - Physical Triggers for Digital Streaming (2025)**
-Vinyl Stream uses NFC technology to bridge physical vinyl records and streaming services. Users place NFC-enabled records on a base unit that instantly plays the album through connected smart speakers while syncing smart lighting to match album artwork. The system integrates with Spotify, Apple Music, and TIDAL, supporting multi-room audio across smart speaker ecosystems.
+ESP32-powered NFC music player that integrates with Home Assistant, bridging the tactile experience of vinyl with digital streaming.
+
+How it works:
+1. NFC cards are programmed with a URL (e.g. Spotify album link) using any NFC writing app on your phone
+2. ESP32 + MFRC522 reads the card and publishes the URL and player action (play, pause, resume, idle) to Home Assistant via MQTT
+3. Home Assistant automation receives the action and controls Sonos or other media players
+
+Key features:
+- Place card to play, remove to pause, replace to resume — physical interaction for digital music
+- WiFiManager captive portal for first-boot WiFi setup
+- Web config page for MQTT broker settings
+- Home Assistant automation with play/pause/resume triggers
+- Supports NTAG213/215/216 NFC stickers with any music URL
+- Hardware: any ESP32 dev board + MFRC522 RFID module
+- Arduino IDE firmware using WiFiManager, ArduinoHA, and MFRC522 libraries
+
+Tech: C++ (Arduino), ESP32, MFRC522, MQTT, Home Assistant
+License: MIT
+GitHub: https://github.com/qrobinso/music-cards-esp32
 
 **Photo Frame Assistant - Self-Hosted Digital Photo Frame Manager (2025)**
-Photo Frame Assistant is a self-hosted platform that manages multiple digital photo frames across a home network. Built as a privacy-first alternative to cloud services, it keeps all photos local while controlling e-ink displays, smart TVs, and DIY frames from a unified dashboard. The system handles scheduling, sync groups for coordinated displays, and power optimization for battery-operated frames. Technical stack runs on Python with Docker containers, MQTT communication, and Raspberry Pi compatibility.
+A self-hosted platform that manages multiple digital photo frames across a home network. Built as a privacy-first alternative to cloud services, it keeps all photos local while controlling e-ink displays, smart TVs, and DIY frames from a unified dashboard. Features scheduling, sync groups for coordinated displays, and power optimization for battery-operated frames.
+
+Tech: Python, Docker, MQTT, Raspberry Pi
+GitHub: (private/in development)
 
 **FROtorial - Social Network for Textured Hair (2021)**
-FROtorial addressed a gap in the multi-billion dollar ethnic hair care market—no major social platforms served the kinky and curly hair community. We built a social network where users could document their hair journey, search product reviews filtered by hair type, discover routines, and buy products directly. The core insight was simple: people with textured hair had questions and conversations they wouldn't post on Facebook or Instagram. They needed a dedicated space.
+FROtorial addressed a gap in the multi-billion dollar ethnic hair care market — no major social platforms served the kinky and curly hair community. Built a social network where users could document their hair journey, search product reviews filtered by hair type, discover routines, and buy products directly. The core insight: people with textured hair had questions and conversations they wouldn't post on Facebook or Instagram. They needed a dedicated space.
 
 **ShopBuy - Universal Cart for Multiple Retailers (2018)**
-ShopBuy aggregated products from multiple retailers into a single feed with a universal cart. Built a platform that mapped disparate product fields to a common format. The product strategy borrowed from social media—an Instagram-style feed that felt familiar but showed retail products. Added gamification to drive repeat visits and engagement.
+ShopBuy aggregated products from multiple retailers into a single feed with a universal cart. Built a platform that mapped disparate product fields to a common format. The product strategy borrowed from social media — an Instagram-style feed that felt familiar but showed retail products. Added gamification to drive repeat visits and engagement.
 
 ### Patents (15 issued patents)
 

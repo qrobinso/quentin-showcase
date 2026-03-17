@@ -100,25 +100,61 @@ Quentin Robinson is a seasoned product leader currently serving as Head of Produ
 ## Side Projects
 
 ### Prevue - Self-Hosted Retro Cable TV Guide (2025)
-A self-hosted retro cable TV guide for Jellyfin and Plex. Auto-generates channels from media libraries with AI-powered channel creation via OpenRouter. Features Prevue Channel-style EPG grid, HLS player, IPTV output, iconic scene detection, sleep timer, and PWA support.
+A self-hosted retro cable TV guide for Jellyfin and Plex that solves decision fatigue. Turns media libraries into a cable TV channel-surfing experience.
+- **AI channel creation** — describe a channel in plain English ("80s action movies", "Christopher Nolan marathon") and it builds itself via OpenRouter
+- **Auto-generated channels** by genre, era, director, actor, collection, or build custom channels manually
+- **Content filters** by type, rating, genre, unwatched status
+- **Hardware transcoding** via media server pipeline — 480p to 4K, HEVC supported
+- **Retro EPG grid** — Prevue Channel-style guide with HLS player, overlay controls, nerd stats, PiP
+- **Iconic scene detection** — AI flags famous movie moments as they happen live
+- **"What Did I Miss"** — spoiler-free catch-up for movies already in progress
+- **Live ticker** — scrolling marquee with primetime picks, recently added, stats, trivia
+- **Just Watch mode** — skip the guide, auto-pick a channel by time of day and watch history
+- **Sleep timer** — 15-120 min, volume fade, screen dim, goodnight screen with snooze
+- **Multi-track audio and subtitles** with per-language preferences
+- **IPTV server** — M3U + XMLTV EPG for Kodi, VLC, Jellyfin, TiviMate
+- **PWA** for iOS and Android
+- **Tech:** Node.js, React, Vite, HLS.js, SQLite, Docker
+- **License:** CC BY-NC-SA 4.0
 - **GitHub:** https://github.com/qrobinso/prevue
 
 ### Augustus - AI Podcast Generator (2025)
-Self-hosted audio intelligence platform that transforms RSS feeds, custom websites, and NewsAPI content into AI-generated podcasts using LLMs and TTS. Supports multi-profile households, scheduled briefings, and customizable AI host personalities.
+Self-hosted audio intelligence platform that transforms personalized content into AI-generated podcasts. Two use cases: (1) home lab with multi-profile households, (2) enterprises with data sovereignty needs.
+- **Daily briefings** — AI-generated audio from news, blogs, Reddit with configurable duration
+- **Scheduled briefings** — daily, weekly, or custom patterns with email/webhook notifications
+- **Topics** — AI-powered site suggestion, NewsAPI integration, automatic article scraping
+- **Casts** — customizable AI host personalities and voices, multi-voice conversations
+- **Multi-profile** — independent briefings, topics, schedules, and casts per household member
+- **Audio player** — chapter-based progress, interactive markers, speed control (0.75x-2.0x), resume
+- **100+ AI models** via OpenRouter for script generation
+- **Three TTS providers:** Piper (self-hosted, free), ElevenLabs (premium), Google Gemini (expressive)
+- **Email notifications** via Resend with HTML templates and transcript previews
+- **Webhooks** for external service integration
+- **Tech:** FastAPI (Python), React, SQLite, Docker
+- **License:** Apache 2.0
 - **GitHub:** https://github.com/qrobinso/augustus
 
 ### Vinyl Stream - Physical Triggers for Digital Streaming (2025)
-ESP32-powered NFC music player integrating with Home Assistant. Place NFC card to play music on Sonos, remove to pause, replace to resume. MQTT-based with WiFiManager captive portal for setup.
+ESP32-powered NFC music player bridging tactile vinyl experience with digital streaming via Home Assistant.
+- **How it works:** NFC cards programmed with music URLs → ESP32 + MFRC522 reads card → publishes to Home Assistant via MQTT → controls Sonos/media players
+- **Place to play, remove to pause, replace to resume** — physical interaction for digital music
+- **WiFiManager captive portal** for first-boot WiFi and web config for MQTT
+- **Home Assistant automation** with play/pause/resume triggers
+- **Supports NTAG213/215/216** NFC stickers with any music URL (Spotify, etc.)
+- **Hardware:** any ESP32 dev board + MFRC522 RFID module
+- **Tech:** C++ (Arduino), ESP32, MFRC522, MQTT, Home Assistant
+- **License:** MIT
 - **GitHub:** https://github.com/qrobinso/music-cards-esp32
 
-### Photo Frame Assistant (2025)
-Self-hosted digital photo frame manager for e-ink displays, smart TVs, and DIY frames. Privacy-first alternative to cloud services with scheduling, sync groups, and power optimization.
+### Photo Frame Assistant - Self-Hosted Digital Photo Frame Manager (2025)
+Privacy-first platform managing multiple digital photo frames across a home network. Controls e-ink displays, smart TVs, and DIY frames from one dashboard. Features scheduling, sync groups for coordinated displays, and power optimization for battery-operated frames.
+- **Tech:** Python, Docker, MQTT, Raspberry Pi
 
 ### FROtorial - Social Network for Textured Hair (2021)
-Social network for kinky and curly hair community with product reviews filtered by hair type, hair journey documentation, routines, and integrated commerce.
+Addressed a gap in the multi-billion dollar ethnic hair care market. Built a social network for kinky and curly hair community with hair journey documentation, product reviews filtered by hair type, routine discovery, and integrated commerce. Core insight: people with textured hair needed conversations they wouldn't have on mainstream platforms.
 
 ### ShopBuy - Universal Cart for Multiple Retailers (2018)
-Product aggregation platform with universal cart, Instagram-style feed, and gamification across multiple retailers.
+Product aggregation platform with universal cart across multiple retailers. Instagram-style feed for product discovery, gamification for engagement, and common data format mapping disparate retailer product fields.
 
 ## Patent Portfolio (15 Issued Patents)
 
