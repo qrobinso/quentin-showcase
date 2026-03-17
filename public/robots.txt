@@ -1,15 +1,24 @@
+User-agent: *
+Allow: /
+
+# Search engine crawlers
 User-agent: Googlebot
 Allow: /
 
 User-agent: Bingbot
 Allow: /
 
+# Social media crawlers
 User-agent: Twitterbot
 Allow: /
 
 User-agent: facebookexternalhit
 Allow: /
 
+User-agent: LinkedInBot
+Allow: /
+
+# LLM and AI crawlers
 User-agent: ChatGPT-User
 Allow: /
 
@@ -19,7 +28,19 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-User-agent: *
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: cohere-ai
 Allow: /
 
 Sitemap: /sitemap.xml

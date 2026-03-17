@@ -49,6 +49,28 @@ app.post("/api/chat", async (req, res) => {
 
 // Serve built frontend in production
 app.use(express.static(path.join(__dirname, "dist")));
+
+// Dynamic sitemap with correct domain
+app.get("/sitemap.xml", (req, res) => {
+  const baseUrl = process.env.SITE_URL || `${req.protocol}://${req.get("host")}`;
+  res.type("application/xml").send(`<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>${baseUrl}/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>${baseUrl}/#work</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>${baseUrl}/#side</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>${baseUrl}/#patents</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+</urlset>`);
+});
+
+// LLM discovery: .well-known redirects
+app.get("/.well-known/llms.txt", (req, res) => {
+  res.sendFile(path.join(__dirname, "dist", "llms.txt"));
+});
+app.get("/.well-known/llms-full.txt", (req, res) => {
+  res.sendFile(path.join(__dirname, "dist", "llms-full.txt"));
+});
+
+// SPA fallback — must be last
 app.get("/{*splat}", (req, res) => {
   res.sendFile(path.join(__dirname, "dist", "index.html"));
 });

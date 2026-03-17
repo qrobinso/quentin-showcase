@@ -1,0 +1,12 @@
+# Quentin Robinson - Product Leader Portfolio
+
+> Product and technology leader with 16+ years at Amazon and Verizon. Head of Product & Engineering for Amazon Branded Connected Devices. 15 issued patents, 11 products launched, 250M+ customers impacted. Expert in IoT, smart home automation, generative AI, Matter protocol, and B2B enterprise solutions.
+
+## Contact
+- Email: qrobinso@gmail.com
+- LinkedIn: https://www.linkedin.com/in/querob/
+- GitHub: https://github.com/qrobinso
+- Location: Springfield, New Jersey
+
+## Detailed Information
+- [Full Portfolio Details](/llms-full.txt)

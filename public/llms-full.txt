@@ -1,0 +1,166 @@
+# Quentin Robinson - Product Leader Portfolio (Full Details)
+
+> Product and technology leader with 16+ years at Amazon and Verizon. Head of Product & Engineering for Amazon Branded Connected Devices. 15 issued patents, 11 products launched, 250M+ customers impacted. Expert in IoT, smart home automation, generative AI, Matter protocol, and B2B enterprise solutions.
+
+## Professional Summary
+
+Quentin Robinson is a seasoned product leader currently serving as Head of Product & Engineering at Amazon, where he leads Branded Connected Devices. He specializes in the intersection of hardware and software, having shipped some of the world's most popular consumer electronics and B2B enterprise services at scale. His expertise spans IoT solutions, smart home automation, wearable technology, generative AI, and cellular connectivity.
+
+### Key Metrics
+- 16+ years of product leadership experience
+- 11 products launched at scale
+- 250M+ customers impacted globally
+- 15 issued patents in IoT, AI, and distributed systems
+
+## Career History
+
+### Amazon (Current)
+**Head of Product & Engineering — Branded Connected Devices**
+- Led Frustration-Free Automation: GenAI initiative that auto-creates smart home Routines during setup
+- Shipped FFS Developer Portal enabling hundreds of manufacturers to integrate
+- Led Amazon Air Quality Monitor from concept to launch
+- Integrated Matter standard into Frustration-Free Setup
+- Built Wifi Simple Reconnect for automatic credential propagation
+
+**Head of Product — Device Setup**
+- Owned end-to-end device setup experience for Amazon's connected device ecosystem
+- Scaled Frustration-Free Setup across 1P and 3P partners
+
+### Verizon
+**Senior Product Manager — IoT & Wearables**
+- Created Verizon Critical Asset Sensor: first 1P B2B IoT product
+- Led GizmoPal kids' GPS watch product development
+- Built ThingSpace Ready IoT launch platform
+- Shipped Wear24: Verizon's first standalone LTE smartwatch
+
+## Work Projects
+
+### Frustration-Free Automation (2024)
+- **Sector:** Consumer | **Type:** Service
+- **Problem:** Customers struggled to realize full value of smart home devices, not understanding how to make them work together.
+- **Solution:** Built a GenAI system that auto-creates Routines during device setup, suggesting automations based on compatible devices in the home.
+- **Result:** Shipped across 1P and 3P partners including Amazon Basics, WiZ, and Phillips Hue.
+- **Link:** https://www.amazon.com/gp/help/customer/display.html?nodeId=TWqBhTGsWJP8lYhbye
+
+### Frustration-Free Setup Developer Portal (2023)
+- **Sector:** B2B | **Type:** Service
+- **Problem:** Device manufacturers needed streamlined access to Amazon's FFS integration tools and documentation.
+- **Solution:** Created comprehensive developer portal with integration guides, API documentation, and self-service tools.
+- **Result:** Enabled hundreds of manufacturers to integrate FFS, accelerating smart home device time-to-market.
+- **Link:** https://developer.amazon.com/frustration-free-setup
+
+### Amazon Air Quality Monitor (2022)
+- **Sector:** Consumer | **Type:** Device
+- **Problem:** Customers lacked visibility into indoor air quality without specialized equipment.
+- **Solution:** Affordable air quality monitor tracking five key metrics with Alexa integration.
+- **Result:** Successful consumer device making indoor air quality monitoring accessible to mainstream customers.
+- **Link:** https://a.co/d/iN3uhzq
+
+### Frustration Free Setup for Matter Devices (2022)
+- **Sector:** B2B | **Type:** Service
+- **Problem:** Amazon needed to integrate the Matter standard while maintaining zero-touch setup quality.
+- **Solution:** Matter Simple Setup bridging proprietary FFS with the standardized Matter protocol.
+- **Result:** Enabled Amazon and 3P manufacturers to adopt Matter while preserving best-in-class setup experience.
+- **Link:** https://developer.amazon.com/en-US/blogs/alexa/device-makers/2022/01/ces-frustration-free-setup-matter
+
+### Wifi Simple Reconnect (2021)
+- **Sector:** Consumer | **Type:** Service
+- **Problem:** Updating WiFi credentials on each smart device individually took hours with dozens of devices.
+- **Solution:** One-action WiFi update through Alexa that propagates to all compatible devices simultaneously.
+- **Result:** Reduced credential updates from hours to a single action.
+- **Link:** https://developer.amazon.com/en-US/blogs/alexa/device-makers/2020/09/Frustration-Free-Setup-Expands-Features-Protocols-and-Simplifies-Onboarding
+
+### Verizon Critical Asset Sensor (2020)
+- **Sector:** B2B | **Type:** Device
+- **Problem:** Enterprise customers faced complexity managing IoT devices, connectivity, APIs, and security separately.
+- **Solution:** First fully integrated B2B IoT product: multi-sensor + 4G LTE-M + data APIs + security, all bundled.
+- **Result:** Established Verizon's first-party presence in enterprise IoT device market.
+- **Link:** https://thingspace.verizon.com/documentation/iot-devices/critical-asset-sensor.html
+
+### Gizmo Pal Watch (2019)
+- **Sector:** Consumer | **Type:** Device
+- **Problem:** Parents wanted kid-safe connectivity without giving young children smartphones.
+- **Solution:** Simplified wearable with GPS tracking, two-way calling, and parental controls.
+- **Result:** Successful kids' wearable line giving parents peace of mind.
+- **Link:** https://www.verizon.com/connected-smartwatches/verizon-gizmowatch-2/
+
+### ThingSpace Ready (2018)
+- **Sector:** B2B | **Type:** Service
+- **Problem:** IoT companies faced long, unpredictable development cycles getting cellular products to market.
+- **Solution:** End-to-end launch platform with transparent pricing, design partners, and free certification support.
+- **Result:** Removed traditional barriers to cellular IoT adoption.
+- **Link:** https://thingspace.verizon.com/ready
+
+### Verizon Wear24 (2017)
+- **Sector:** Consumer | **Type:** Device
+- **Problem:** Android Wear smartwatches required constant phone tethering.
+- **Solution:** Standalone LTE smartwatch with calls, messaging, and data without phone connection.
+- **Result:** Independent smartwatch experience freeing users from phone dependency.
+
+## Side Projects
+
+### Prevue - Self-Hosted Retro Cable TV Guide (2025)
+A self-hosted retro cable TV guide for Jellyfin and Plex. Auto-generates channels from media libraries with AI-powered channel creation via OpenRouter. Features Prevue Channel-style EPG grid, HLS player, IPTV output, iconic scene detection, sleep timer, and PWA support.
+- **GitHub:** https://github.com/qrobinso/prevue
+
+### Augustus - AI Podcast Generator (2025)
+Self-hosted audio intelligence platform that transforms RSS feeds, custom websites, and NewsAPI content into AI-generated podcasts using LLMs and TTS. Supports multi-profile households, scheduled briefings, and customizable AI host personalities.
+- **GitHub:** https://github.com/qrobinso/augustus
+
+### Vinyl Stream - Physical Triggers for Digital Streaming (2025)
+ESP32-powered NFC music player integrating with Home Assistant. Place NFC card to play music on Sonos, remove to pause, replace to resume. MQTT-based with WiFiManager captive portal for setup.
+- **GitHub:** https://github.com/qrobinso/music-cards-esp32
+
+### Photo Frame Assistant (2025)
+Self-hosted digital photo frame manager for e-ink displays, smart TVs, and DIY frames. Privacy-first alternative to cloud services with scheduling, sync groups, and power optimization.
+
+### FROtorial - Social Network for Textured Hair (2021)
+Social network for kinky and curly hair community with product reviews filtered by hair type, hair journey documentation, routines, and integrated commerce.
+
+### ShopBuy - Universal Cart for Multiple Retailers (2018)
+Product aggregation platform with universal cart, Instagram-style feed, and gamification across multiple retailers.
+
+## Patent Portfolio (15 Issued Patents)
+
+### Device Setup & Provisioning
+1. **Systems and Methods for Automatically Configuring Computer Devices** (Patent 12132611, Oct 2024) — Pre-onboarding via QR codes for automatic device configuration before delivery.
+2. **Server-Based Association of a User Device with a User Account** (Patent 11671829, Jun 2023) — Third-party device registration through Frustration Free Setup service.
+3. **Confidence Based Network Provisioning of Devices** (Patent 11606690, Mar 2023) — Confidence-score-based device-to-network connections using multiple data sources.
+4. **Associating Device with User Account and Establishing Connection** (Patent 11575759, Feb 2023) — Secure device setup via account association and confirmation requests.
+
+### Network Management
+5. **Process for Managing Reconnections of Devices in a Network** (Patent 11871471, Jan 2024) — IoT device reconnection after network loss via beacon relay.
+6. **Process for Managing Reconnections of Devices in a Network** (Patent 11368994, Jun 2022) — Echo-based beacon relay for IoT reconnection after connection loss.
+
+### IoT
+7. **Connection Management for Internet of Things Devices** (Patent 20220174596, Oct 2019) — Optimized LTE Cat-M1 reporting to reduce power consumption.
+8. **Registering a Smart Device Using a Multicast Protocol** (Patent US10291603B2, May 2019) — Simultaneous smart device registration via multicast messaging.
+
+### Wearables
+9. **Configuring a User Interface Layout via a Configuration Device** (Patent 20170322711, Nov 2019) — Smart watch UI configuration from companion device.
+10. **Homescreen for Wearable Devices** (Patent US20170075551A1, Oct 2019) — Context-aware home screen adapting to location, sensors, and time.
+11. **Wearable Device Design for 4G Antennas** (Patent 20170373381, Oct 2019) — Optimized 4G antenna design minimizing radiation exposure.
+12. **Wearable Device Having Interchangeable Touch User Interface** (Patent 20170003720, Jul 2019) — Modular wearable with detachable touch interfaces.
+13. **Wireless Network Interface Management on Multi-Radio Devices** (Patent 20180205608, Aug 2018) — Smart wireless interface switching for optimal battery life.
+14. **Enabling Interchangeability of Sensor Devices** (Patent 20170294085, Apr 2018) — Hot-swappable sensor system for wearables.
+15. **Assisted Cellular Device Activation** (Patent 9854426, Dec 2017) — SDK-based remote cellular activation for wearable devices.
+
+## Expertise Areas
+- Product Management & Strategy
+- Internet of Things (IoT)
+- Smart Home Automation
+- Generative AI / Machine Learning
+- Matter Protocol
+- Frustration-Free Setup / Device Provisioning
+- Wearable Technology
+- Cellular IoT (LTE-M, Cat-M1, 4G)
+- B2B Enterprise Solutions
+- Hardware-Software Integration
+- Developer Platforms & APIs
+- Network Management & Provisioning
+
+## Contact
+- Email: qrobinso@gmail.com
+- LinkedIn: https://www.linkedin.com/in/querob/
+- GitHub: https://github.com/qrobinso
+- Location: Springfield, New Jersey
