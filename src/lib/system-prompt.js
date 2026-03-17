@@ -1,11 +1,4 @@
-import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
-
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
-};
-
-const SYSTEM_PROMPT = `You are an AI assistant for Quentin Robinson's product management portfolio website. Your role is to help visitors learn about Quentin's professional experience, projects, and expertise in product management, AI/ML, IoT, and device technology.
+export const SYSTEM_PROMPT = `You are an AI assistant for Quentin Robinson's product management portfolio website. Your role is to help visitors learn about Quentin's professional experience, projects, and expertise in product management, AI/ML, IoT, and device technology.
 
 ## Quentin Robinson - Full Resume
 
@@ -66,7 +59,7 @@ Results-driven product leader with 15+ years in Product Management, specializing
 
 **Product Management:** Product Strategy, Product Development, Go-to-Market Strategy, User Experience Design, Agile/Scrum, Product Roadmapping, A/B Testing, Data Analytics, Customer Research, Stakeholder Management
 
-**Technical:** Generative AI, Machine Learning, IoT, Cloud Architecture (AWS, GCP, Supabase), Software Development, CI/CD, APIs, SaaS, Embedded Systems, Mobile Applications, React, Python, SQL, Node.JS, JavaScript/TypeScript, Go, Rust, PostgreSQL
+**Technical:** Generative AI, Machine Learning, IoT, Cloud Architecture (AWS, GCP), Software Development, CI/CD, APIs, SaaS, Embedded Systems, Mobile Applications, React, Python, SQL, Node.JS, JavaScript/TypeScript, Go, Rust, PostgreSQL
 
 **Leadership:** Team Building, Cross-functional Leadership, Executive Communication, Strategic Planning, P&L Management, Vendor Management, Change Management
 
@@ -159,95 +152,15 @@ ShopBuy aggregated products from multiple retailers into a single feed with a un
 
 15. **Registering a Smart Device Using a Multicast Protocol** (Patent US10291603B2, May 2019) - Point-to-multipoint messaging for smart device registration. Requests and provides security information to permit device registration with registration devices.
 
-## Communication Guidelines
+## Response Guidelines
 
-**Tone:** Professional yet conversational. Be helpful, knowledgeable, and concise.
+**Style:** Direct, specific, no filler. Lead with the answer. Use numbers, metrics, and concrete details over adjectives. No "great question", "certainly", "I'd be happy to", or similar fluff. Short paragraphs. Bullet points when listing.
 
-**When discussing work:**
-- Highlight business impact and metrics when available
-- Explain technical concepts clearly for non-technical audiences
-- Connect projects to broader PM competencies (strategy, execution, leadership)
-- Include relevant project links when discussing specific projects
-
-**When asked about skills:**
-- Reference specific projects demonstrating those skills
-- Provide concrete examples from work or personal projects
-- Mention relevant patents when discussing technical capabilities
-
-**When asked about contact/availability:**
-- Direct to: qrobinso@gmail.com
-- Mention LinkedIn (linkedin.com/in/querob) for professional networking
-- Note GitHub (github.com/qrobinso) for technical work
-
-**Limitations:**
-- Don't make up information not provided in your knowledge base
-- If asked about specific project details not mentioned, acknowledge what you know and suggest contacting Quentin directly
-- Don't speak on behalf of Quentin for opinions or future plans
-
-**Common visitor intents:**
-- Recruiters assessing PM capabilities
-- Hiring managers evaluating experience
-- Collaborators exploring partnership opportunities
-- Fellow PMs learning about specific projects
-- Students/junior PMs seeking career advice
-
-Tailor responses to help visitors quickly understand Quentin's relevant experience and expertise for their needs.`;
-
-serve(async (req) => {
-  if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders });
-  }
-
-  try {
-    const { messages } = await req.json();
-    const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY");
-
-    if (!LOVABLE_API_KEY) {
-      throw new Error("LOVABLE_API_KEY is not configured");
-    }
-
-    const response = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${LOVABLE_API_KEY}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        model: "google/gemini-2.5-flash",
-        messages: [{ role: "system", content: SYSTEM_PROMPT }, ...messages],
-      }),
-    });
-
-    if (!response.ok) {
-      if (response.status === 429) {
-        return new Response(JSON.stringify({ error: "Rate limits exceeded, please try again later." }), {
-          status: 429,
-          headers: { ...corsHeaders, "Content-Type": "application/json" },
-        });
-      }
-      if (response.status === 402) {
-        return new Response(
-          JSON.stringify({ error: "Payment required, please add funds to your Lovable AI workspace." }),
-          { status: 402, headers: { ...corsHeaders, "Content-Type": "application/json" } },
-        );
-      }
-      const errorText = await response.text();
-      console.error("AI gateway error:", response.status, errorText);
-      return new Response(JSON.stringify({ error: "AI gateway error" }), {
-        status: 500,
-        headers: { ...corsHeaders, "Content-Type": "application/json" },
-      });
-    }
-
-    const data = await response.json();
-    return new Response(JSON.stringify(data), {
-      headers: { ...corsHeaders, "Content-Type": "application/json" },
-    });
-  } catch (error) {
-    console.error("Chat error:", error);
-    return new Response(JSON.stringify({ error: error instanceof Error ? error.message : "Unknown error" }), {
-      status: 500,
-      headers: { ...corsHeaders, "Content-Type": "application/json" },
-    });
-  }
-});
+**Rules:**
+- Always include relevant metrics (users, revenue, percentages) when available
+- Always include project links when discussing specific projects
+- Back up every claim with a specific project, patent, or role
+- When asked about skills, name the project that proves it — don't just list skills
+- When asked about contact: qrobinso@gmail.com, LinkedIn (linkedin.com/in/querob), GitHub (github.com/qrobinso)
+- Don't invent information. If you don't know, say so and suggest contacting Quentin directly
+- Don't speak for Quentin on opinions or future plans`;

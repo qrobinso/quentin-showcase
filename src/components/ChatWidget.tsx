@@ -5,7 +5,6 @@ import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Skeleton } from "@/components/ui/skeleton";
-import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 import { useIsMobile } from "@/hooks/use-mobile";
 import ReactMarkdown from "react-markdown";
@@ -119,21 +118,19 @@ export const ChatWidget = ({
     setIsLoading(true);
 
     try {
-      const { data, error } = await supabase.functions.invoke('chat', {
-        body: { messages: newMessages }
+      const response = await fetch("/api/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ messages: newMessages }),
       });
 
-      if (error) throw error;
-
-      if (data?.error) {
-        toast({
-          title: "Error",
-          description: data.error,
-          variant: "destructive",
-        });
-        return;
+      if (!response.ok) {
+        const errorText = await response.text();
+        console.error("OpenRouter error:", response.status, errorText);
+        throw new Error("Failed to get response");
       }
 
+      const data = await response.json();
       const assistantMessage = data?.choices?.[0]?.message?.content;
       if (assistantMessage) {
         setMessages(prev => [...prev, {
