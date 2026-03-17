@@ -8,6 +8,7 @@ export interface Project {
   userApplication?: string;
   images: string[];
   link?: string;
+  github?: string;
   date: string;
   sector?: 'Consumer' | 'B2B';
   type?: 'Device' | 'Service';
@@ -139,14 +140,41 @@ export const workProjects: Project[] = [
 
 export const sideProjects: Project[] = [
   {
+    id: 'prevue',
+    title: 'Prevue - Self-Hosted Retro Cable TV Guide',
+    description: 'A self-hosted retro cable TV guide for Jellyfin and Plex. Turns your media library into a channel-surfing experience with auto-generated channels, a Prevue Channel-style EPG grid, built-in HLS player, and IPTV output. AI-powered channel creation via OpenRouter lets you describe channels in plain English. Includes iconic scene detection, "What Did I Miss" catch-up, sleep timer, and Just Watch mode.',
+    problem: 'Decision fatigue when browsing media libraries. You sit down and spend more time choosing what to watch than actually watching. Existing solutions charge for cable TV-like experiences over your own content.',
+    solution: 'Built a self-hosted platform that auto-generates channels from your Jellyfin/Plex library by genre, era, director, actor, or collection. AI channel creation lets you say "80s action movies" and it builds itself. PWA works on all devices.',
+    result: 'Fully functional cable TV experience over personal media with IPTV export for Kodi/VLC/TiviMate, hardware transcoding up to 4K, multi-track audio/subtitle support, and Docker deployment.',
+    images: [
+      new URL('../assets/prevue-1.png', import.meta.url).href,
+      new URL('../assets/prevue-2.png', import.meta.url).href,
+      new URL('../assets/prevue-3.png', import.meta.url).href,
+      new URL('../assets/prevue-4.png', import.meta.url).href
+    ],
+    github: 'https://github.com/qrobinso/prevue',
+    date: '2026'
+  },
+  {
+    id: 'augustus',
+    title: 'Augustus - AI Podcast Generator',
+    description: 'A self-hosted audio intelligence platform that transforms personalized content into AI-generated podcasts. Pulls from RSS feeds, custom websites, and NewsAPI, then uses LLMs via OpenRouter to write scripts and TTS to produce audio. Supports multi-profile households, scheduled briefings, customizable AI host personalities ("Casts"), and chapter-based playback.',
+    problem: 'Staying informed requires jumping between multiple news sources, podcasts, and feeds. No existing tool turns your specific interests into a personalized audio briefing you can listen to hands-free.',
+    solution: 'Built a self-hosted platform with FastAPI backend, React frontend, and SQLite. Users define topics, AI suggests and scrapes sources, LLMs script the episode, and TTS (Piper, ElevenLabs, or Gemini) produces the audio. Supports multiple profiles and scheduled daily briefings.',
+    result: 'A fully local, privacy-first podcast pipeline with 100+ model support via OpenRouter, three TTS providers, Docker deployment, and enterprise-ready multi-profile support.',
+    images: ['/placeholder.svg'],
+    github: 'https://github.com/qrobinso/augustus',
+    date: '2025'
+  },
+  {
     id: 'vinyl-stream',
     title: 'Vinyl Stream - Physical Triggers for Digital Streaming',
-    description: 'Vinyl Stream uses NFC technology to bridge physical vinyl records and streaming services. Users place NFC-enabled records on a base unit that instantly plays the album through connected smart speakers while syncing smart lighting to match album artwork. The system integrates with Spotify, Apple Music, and TIDAL, supporting multi-room audio across smart speaker ecosystems.',
+    description: 'An ESP32-powered NFC music player that integrates with Home Assistant. Place an NFC card on the reader to play music on Sonos speakers via MQTT; remove it to pause, place it back to resume. Cards are programmed with Spotify/music URLs using any NFC writing app. Supports NTAG213/215/216 stickers.',
     problem: 'Music lovers wanted the tactile, intentional experience of vinyl without sacrificing the convenience and multi-room capabilities of streaming services.',
-    solution: 'Built an NFC-based system that lets users place physical records on a base unit to trigger instant playback across smart speakers, with synchronized smart lighting based on album artwork.',
-    result: 'Created a unique product that bridges analog nostalgia with digital convenience, supporting Spotify, Apple Music, TIDAL, and major smart speaker ecosystems.',
+    solution: 'Built an ESP32 + MFRC522 NFC reader that publishes play/pause/resume actions to Home Assistant via MQTT. WiFiManager captive portal handles first-boot config. Home Assistant automations control Sonos playback.',
+    result: 'A working hardware bridge between physical NFC cards and digital streaming, with automatic play/pause based on card presence and resume support for returning to the same track.',
     images: ['/placeholder.svg'],
-    link: '',
+    github: 'https://github.com/qrobinso/music-cards-esp32',
     date: '2025'
   },
   {

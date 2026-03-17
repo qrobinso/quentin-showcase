@@ -34,6 +34,9 @@ const SAMPLE_PROMPTS = [
   "Tell me about Quentin's experience with wearable devices",
   "What B2B IoT products has Quentin built at Verizon?",
   "Has Quentin worked with Matter or other smart home protocols?",
+  "Tell me about Prevue, the cable TV guide project",
+  "What is Augustus and how does it generate podcasts?",
+  "How does the Vinyl Stream NFC music player work?",
 ];
 interface Message {
   role: 'user' | 'assistant';

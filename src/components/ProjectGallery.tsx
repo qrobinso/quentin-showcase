@@ -3,7 +3,7 @@ import { Project } from "@/data/projects";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, ChevronLeft, ChevronRight, Filter } from "lucide-react";
+import { ExternalLink, ChevronLeft, ChevronRight, Filter, Github } from "lucide-react";
 import { ImageGalleryModal } from "@/components/ImageGalleryModal";
 import {
   DropdownMenu,
@@ -222,16 +222,28 @@ export const ProjectGallery = ({ title, description, projects, id }: ProjectGall
                   <CardTitle className="text-2xl font-serif group-hover:text-accent transition-colors">
                     {project.title}
                   </CardTitle>
-                  {project.link && (
-                    <a 
-                      href={project.link} 
-                      className="text-muted-foreground hover:text-accent transition-colors"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <ExternalLink className="h-5 w-5" />
-                    </a>
-                  )}
+                  <div className="flex items-center gap-2 shrink-0">
+                    {project.github && (
+                      <a
+                        href={project.github}
+                        className="text-muted-foreground hover:text-accent transition-colors"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Github className="h-5 w-5" />
+                      </a>
+                    )}
+                    {project.link && (
+                      <a
+                        href={project.link}
+                        className="text-muted-foreground hover:text-accent transition-colors"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <ExternalLink className="h-5 w-5" />
+                      </a>
+                    )}
+                  </div>
                 </div>
                 <Badge variant="secondary" className="w-fit">
                   {project.date}

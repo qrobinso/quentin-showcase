@@ -21,7 +21,7 @@ const Index = () => {
       
       <footer className="pt-12 pb-32 px-6 border-t border-border">
         <div className="max-w-7xl mx-auto text-center text-muted-foreground">
-          <p>© 2025 Quentin Robinson. Product Leader specializing in IoT, Smart Home, and B2B Enterprise Solutions.</p>
+          <p>© 2026 Quentin Robinson. Product Leader specializing in IoT, Smart Home, and B2B Enterprise Solutions.</p>
           <nav className="mt-4 flex justify-center gap-6 text-sm" aria-label="Footer navigation">
             <a href="#work" className="hover:text-primary transition-colors">Work Projects</a>
             <a href="#side" className="hover:text-primary transition-colors">Side Projects</a>
